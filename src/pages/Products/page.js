@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const products = [
   {
@@ -49,112 +49,78 @@ const products = [
 ];
 
 const Modal = ({ product, onClose }) => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    if (product) {
-      setLoading(true);
-      setTimeout(() => setLoading(false), 800); // Simulating loading delay
-    }
-  }, [product]);
-
   if (!product) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center p-4">
-      <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg relative max-h-[90vh] overflow-y-auto">
+    <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center p-4 z-50">
+      <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg relative">
         <button
           className="absolute top-2 right-2 text-gray-600 hover:text-red-600 text-2xl"
           onClick={onClose}
         >
           &times;
         </button>
-
-        {loading ? (
-          <div className="flex justify-center items-center min-h-[200px]">
-            <div className="pyramid-loader">
-              <div className="wrapper">
-                <span className="side side1"></span>
-                <span className="side side2"></span>
-                <span className="side side3"></span>
-                <span className="side side4"></span>
-                <span className="shadow"></span>
-              </div>
-            </div>
-          </div>
-        ) : (
-          <>
-            <img
-              src={product.image}
-              alt={product.name}
-              className="w-full h-64 object-cover rounded-lg"
-            />
-            <h2 className="text-2xl font-bold mt-4 text-red-800">
-              {product.name}
-            </h2>
-            <p className="text-gray-700 mt-4 text-lg leading-relaxed">
-              {product.description}
-            </p>
-            <button
-              className="mt-6 bg-gradient-to-r from-red-800 to-pink-600 text-white px-6 py-2 rounded-full hover:scale-105 transition-transform"
-              onClick={onClose}
-            >
-              Close
-            </button>
-          </>
-        )}
+        <img
+          src={product.image}
+          alt={product.name}
+          className="w-full h-64 object-cover rounded-lg"
+        />
+        <h2 className="text-2xl font-bold mt-4 text-red-800">{product.name}</h2>
+        <p className="text-gray-700 mt-4 text-lg leading-relaxed">{product.description}</p>
+        <button
+          className="mt-6 bg-gradient-to-r from-red-800 to-pink-600 text-white px-6 py-2 rounded-full hover:scale-105 transition-transform"
+          onClick={onClose}
+        >
+          Close
+        </button>
       </div>
     </div>
   );
 };
+
+
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   return (
     <div className="min-h-screen py-20 px-6 lg:px-20">
       <div className="about text-center mb-12" data-aos="fade-down">
-        <h1 className="text-5xl font-semibold name tracking-wide group hover:text-pink-600 transition-colors duration-300">
-          <span className="text-red-800 group-hover:text-pink-600 transition-colors duration-300">
-            Our
-          </span>
-          <span className="text-pink-600 group-hover:text-red-800 transition-colors duration-300">
-            {" "}
-            Products
-          </span>
+        <h1 className="text-4xl md:text-5xl font-semibold tracking-wide group hover:text-pink-600 transition-colors duration-300">
+          <span className="text-red-800 group-hover:text-pink-600">Our</span>
+          <span className="text-pink-600 group-hover:text-red-800"> Products</span>
         </h1>
       </div>
 
       {["Ribbon Flower", "Chocolate"].map((category) => (
         <div key={category} className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 font-[cursive]">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 font-[cursive]">
             <span className="text-red-800">{category}</span>{" "}
             <span className="text-pink-600">Bouquets</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {products
               .filter((product) => product.category === category)
               .map((product) => (
                 <div
                   key={product.id}
-                  className="relative bg-white p-6 rounded-lg shadow-lg border-2 border-transparent 
-  hover:border-pink-400 hover:shadow-[0_0_15px_#ff1493] hover:scale-105 transition-all duration-300"
+                  className="relative bg-white p-6 rounded-lg shadow-lg border-2 border-transparent hover:border-pink-400 hover:shadow-[0_0_15px_#ff1493] hover:scale-105 transition-all duration-300 cursor-pointer"
+                  onClick={() => setSelectedProduct(product)}
                 >
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-64 object-cover rounded-lg"
+                    className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg"
                   />
-                  <h3 className="text-xl font-bold mt-4 text-red-800">
+                  <h3 className="text-lg sm:text-xl font-bold mt-4 text-red-800">
                     {product.name}
                   </h3>
-                  <p className="text-gray-600 mt-2">
+                  <p className="text-gray-600 mt-2 text-sm sm:text-base">
                     {product.description.split(" ").slice(0, 15).join(" ")}...
                   </p>
                   <button
-                    onClick={() => setSelectedProduct(product)}
-                    className="mt-4 bg-gradient-to-r from-red-800 to-pink-600 text-white px-6 py-2 rounded-full hover:scale-105 transition-transform"
+                    className="mt-4 bg-gradient-to-r from-red-800 to-pink-600 text-white px-4 py-2 rounded-full hover:scale-105 transition-transform"
                   >
-                    Details
+                    View Details
                   </button>
                 </div>
               ))}
@@ -162,10 +128,7 @@ const Products = () => {
         </div>
       ))}
 
-      <Modal
-        product={selectedProduct}
-        onClose={() => setSelectedProduct(null)}
-      />
+      <Modal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
     </div>
   );
 };

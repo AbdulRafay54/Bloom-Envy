@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 shadow-md transition duration-300 ${
-        isScrolled ? "bg-opacity-80 backdrop-blur-md" : "bg-white"
+        isScrolled ? "bg-opacity-80 backdrop-blur-md" : "bg-gradient-to-b from-pink-100 to-pink-50"
       }`}
       //   bg-[#baa8d1]
     >
