@@ -75,7 +75,7 @@ const Navbar = () => {
             href="#projects"
             className="nav-link hover:text-red-800 hover:text-pink-600 transition-colors duration-300 font-[cursive]"
           >
-            Projects
+            Products
           </Link>
           <Link
             href="#contact"
@@ -106,7 +106,7 @@ const Navbar = () => {
           className="nav-link block py-2 text-center font-[cursive]"
           onClick={toggleMenu}
         >
-          Projects
+          Products
         </Link>
         <Link
           href="#contact"
