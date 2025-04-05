@@ -12,7 +12,7 @@ const Hero = () => {
           objectFit="cover"
           className="opacity-80"
         />
-        {/* Light Overlay */}
+
         <div className="absolute inset-0 bg-white/40"></div>
       </div>
 
