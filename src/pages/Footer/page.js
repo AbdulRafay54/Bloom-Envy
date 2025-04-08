@@ -12,14 +12,9 @@ const Footer = () => {
         <Link className="hover:text-gray-900" href="#">
           About
         </Link>
+        
         <Link className="hover:text-gray-900" href="#">
-          Services
-        </Link>
-        <Link className="hover:text-gray-900" href="#">
-          Media
-        </Link>
-        <Link className="hover:text-gray-900" href="#">
-          Gallery
+          Products
         </Link>
         <Link className="hover:text-gray-900" href="#">
           Contact

@@ -26,7 +26,9 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 shadow-md transition duration-300 ${
-        isScrolled ? "bg-opacity-80 backdrop-blur-md" : "bg-gradient-to-b from-pink-100 to-pink-50"
+        isScrolled
+          ? "bg-opacity-80 backdrop-blur-md"
+          : "bg-gradient-to-b from-pink-100 to-pink-50"
       }`}
       //   bg-[#baa8d1]
     >
@@ -50,12 +52,30 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <button onClick={toggleMenu} className="md:hidden focus:outline-none">
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/7711/7711100.png"
-            alt="Menu Icon"
-            className="w-7 h-7"
-          />
+        <button
+          onClick={toggleMenu}
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-black rounded-lg md:hidden"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          {/* <span class="sr-only">Open main menu</span> */}
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
         </button>
 
         <div className="hidden md:flex space-x-8">
@@ -119,7 +139,5 @@ const Navbar = () => {
     </nav>
   );
 };
-
-
 
 export default Navbar;

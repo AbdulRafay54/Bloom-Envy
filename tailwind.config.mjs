@@ -7,6 +7,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        pacifico: ['var(--font-pacifico)'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

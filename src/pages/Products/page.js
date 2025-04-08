@@ -4,99 +4,115 @@ import { useState } from "react";
 const products = [
   {
     id: 1,
-    name: "Blue Ribbon Rose Bouquet",
-    category: "Ribbon Flower",
-    images: ["/images/about.png", "/images/ribbon2.jpg", "/images/ribbon3.jpg"],
+    name: "Giant Snack Bouquet",
+    category: "Snack Bouquet",
+    images: [
+      "/images/snack3.jpeg",
+      "/images/snack2.jpeg",
+      "/images/snack1.jpeg",
+    ],
     description:
-      "A unique and artistic rose crafted entirely from blue ribbon, showcasing intricate design and elegance. Perfect for adding a special touch to gifts or décor.",
-    price: "$49.99",
-    location: "New York, USA",
+      "Giant Snack Bouquet is the perfect gift for any occasion, whether it's a birthday, anniversary, or special event. Filled with a variety of delicious snacks, it's a fun and thoughtful way to show someone you care.",
+    price: "₨ 1500",
+    location: "Karachi, Pakistan",
     delivery: "Free Delivery",
     daysToDeliver: "3-5 Days",
   },
   {
     id: 2,
-    name: "Chocolate Love Delight",
-    category: "Chocolate",
-    images: [
-      "/images/chocolate1.jpg",
-      "/images/chocolate2.jpg",
-      "/images/chocolate3.jpg",
-    ],
-    description: "A bouquet filled with chocolates and sweet surprises.",
-    price: "$29.99",
-    location: "California, USA",
-    delivery: "Standard Delivery",
-    daysToDeliver: "5-7 Days",
+    name: "You Chocolate Bouquet",
+    category: "Chocolate Bouquet",
+    images: ["/images/youchoc2.jpeg", "/images/youchoc1.jpeg"],
+    description:
+      "You Chocolate Bouquet is the perfect gift for any occasion, whether it's a birthday, anniversary, or any special event. Made with delicious chocolate, it's a sweet and thoughtful way to show someone you care.",
+    price: "₨ 1500",
+    location: "Karachi, Pakistan",
+    delivery: "Free Delivery",
+    daysToDeliver: "3-5 Days",
   },
   {
     id: 3,
-    name: "Chocolate Love Delight",
-    category: "Chocolate",
+    name: "Mini Ribbon Rose Bouquet",
+    category: "Ribbon Flower",
     images: [
-      "/images/chocolate1.jpg",
-      "/images/chocolate2.jpg",
-      "/images/chocolate3.jpg",
+      "/images/minirose1.jpeg",
+      "/images/minirose2.jpeg",
+      "/images/minirose1.jpeg",
     ],
-    description: "A bouquet filled with chocolates and sweet surprises.",
-    price: "$29.99",
-    location: "California, USA",
-    delivery: "Standard Delivery",
-    daysToDeliver: "5-7 Days",
+    description:
+      "Mini Rose Bouquet is an ideal gift for any occasion, be it a birthday, anniversary, or special celebration. Its charming roses make it a lovely and thoughtful way to express your care.",
+    price: "₨ 1500",
+    location: "Karachi, Pakistan",
+    delivery: "Free Delivery",
+    daysToDeliver: "3-5 Days",
   },
   {
-    id: 3,
-    name: "Chocolate Love Delight",
-    category: "Chocolate",
+    id: 4,
+    name: "Glam Choco Bouquet",
+    category: "Jewellery and Chocolate Bouquet",
     images: [
-      "/images/chocolate1.jpg",
-      "/images/chocolate2.jpg",
-      "/images/chocolate3.jpg",
+      "/images/glamchoco2.jpeg",
+      "/images/glamchoco1.jpeg",
+      "/images/glamchoco3.jpeg",
+      "/images/glamchoco4.jpeg",
     ],
-    description: "A bouquet filled with chocolates and sweet surprises.",
-    price: "$29.99",
-    location: "California, USA",
-    delivery: "Standard Delivery",
-    daysToDeliver: "5-7 Days",
+    description:
+      "Glam Choco Bouquet is a perfect gift for any occasion, whether it's a birthday, anniversary, or special event. With its rich and luxurious chocolates, it's a glamorous and thoughtful way to show someone you care.",
+    price: "₨ 1500",
+    location: "Karachi, Pakistan",
+    delivery: "Free Delivery",
+    daysToDeliver: "3-5 Days",
   },
   {
-    id: 3,
-    name: "Chocolate Love Delight",
-    category: "Chocolate",
+    id: 5,
+    name: "Mini Chocolate Bouquet",
+    category: "Chocolate Bouquet",
     images: [
-      "/images/chocolate1.jpg",
-      "/images/chocolate2.jpg",
-      "/images/chocolate3.jpg",
+      "/images/minichoco1.jpeg",
+      "/images/minichoco2.jpeg",
+      "/images/minichoco3.jpeg",
     ],
-    description: "A bouquet filled with chocolates and sweet surprises.",
-    price: "$29.99",
-    location: "California, USA",
-    delivery: "Standard Delivery",
-    daysToDeliver: "5-7 Days",
+    description:
+      "Mini Chocolate Bouquet is an ideal gift for kids on any occasion, whether it's a birthday, celebration, or special event. Filled with delicious chocolates, it's a sweet and fun way to make their day extra special.",
+    price: "₨ 1500",
+    location: "Karachi, Pakistan",
+    delivery: "Free Delivery",
+    daysToDeliver: "3-5 Days",
   },
   {
-    id: 3,
-    name: "Chocolate Love Delight",
-    category: "Chocolate",
+    id: 6,
+    name: "Blue Ribbon Rose Bouquet",
+    category: "Ribbon Flower Bouquet",
     images: [
-      "/images/chocolate1.jpg",
-      "/images/chocolate2.jpg",
-      "/images/chocolate3.jpg",
+      "/images/rose1.jpeg",
+      "/images/rose2.jpeg",
+      "/images/rose3.jpeg",
+      "/images/rose4.jpeg",
     ],
-    description: "A bouquet filled with chocolates and sweet surprises.",
-    price: "$29.99",
-    location: "California, USA",
-    delivery: "Standard Delivery",
-    daysToDeliver: "5-7 Days",
+    description:
+      "Ribbon Red Rose makes a beautiful gift for any occasion, be it a birthday, anniversary, or special celebration. Its stunning red ribbon design adds a unique and thoughtful touch to express your love and care",
+    price: "₨ 1500",
+    location: "Karachi, Pakistan",
+    delivery: "Free Delivery",
+    daysToDeliver: "3-5 Days",
   },
-  // Add more products with "images" array
 ];
 
 const Modal = ({ product, onClose }) => {
   const [activeImage, setActiveImage] = useState(product?.images[0]);
-  const [isClicked, setIsClicked] = useState(false); // To manage icon color change
+  const [isClicked, setIsClicked] = useState(false);
 
   if (!product) return null;
+
+  const handleBuyNowClick = () => {
+    const message = `Hello Bloomenvy, Mujhe ye buy krna hai, details batain.`;
+    const phoneNumber = "+923303049866";
+
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(whatsappLink, "_blank");
+  };
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-md z-50 flex items-center justify-center">
@@ -114,7 +130,6 @@ const Modal = ({ product, onClose }) => {
         </button>
 
         <div className="flex flex-col lg:flex-row gap-8 mt-12 lg:mt-24">
-          {/* Left Section (Image Gallery) */}
           <div className="flex-1">
             <img
               src={activeImage}
@@ -136,9 +151,30 @@ const Modal = ({ product, onClose }) => {
                 />
               ))}
             </div>
+
+            {/* Download Button */}
+            <div className="mt-4">
+              <div className="mt-4">
+                <a
+                  href={activeImage}
+                  download
+                  className="Btn"
+                >
+                  <svg
+                    className="svgIcon"
+                    viewBox="0 0 384 512"
+                    height="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path>
+                  </svg>
+                  <span className="icon2"></span>
+                  <span className="tooltip">Download</span>
+                </a>
+              </div>
+            </div>
           </div>
 
-          {/* Right Section (Product Details) */}
           <div className="flex-1">
             <h2 className="text-3xl font-bold text-red-800 mb-4">
               {product.name}
@@ -176,7 +212,6 @@ const Modal = ({ product, onClose }) => {
               </div>
             </div>
 
-            {/* Additional Information */}
             <div className="mb-4">
               <div className="text-lg font-semibold mb-2">
                 <span className="text-red-600">Fast Delivery:</span> Yes, within{" "}
@@ -188,14 +223,12 @@ const Modal = ({ product, onClose }) => {
               </div>
             </div>
 
-            {/* Rating & Tags */}
             <div className="mb-4">
               <h3 className="text-xl font-semibold text-gray-800 mb-2">
                 Rating & Tags
               </h3>
               <div className="flex items-center mb-2">
                 <span className="text-yellow-500">★★★★☆</span>{" "}
-                {/* Example rating */}
                 <span className="ml-2 text-gray-600">
                   (4.5/5 - 120 reviews)
                 </span>
@@ -210,9 +243,11 @@ const Modal = ({ product, onClose }) => {
               </div>
             </div>
 
-            {/* Call to Action Button */}
             <div className="mt-6 flex justify-between items-center">
-              <button className="button w-full sm:w-[535px]">
+              <button
+                className="button w-full sm:w-[535px]"
+                onClick={handleBuyNowClick}
+              >
                 <span className="button_lg px-8 py-3">
                   <span className="button_sl"></span>
                   <span className="button_text text-white font-[cursive] font-semibold transition-all duration-500">
@@ -255,39 +290,32 @@ const Products = () => {
             <img
               src={product.images[0]}
               alt={product.name}
-              className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg"
+              className="w-full  h-50 sm:h-56 md:h-64 object-cover rounded-lg"
             />
-            <h3 className="text-lg sm:text-xl font-bold mt-4 text-red-800">
+            <h3 className="text-lg font-[cursive] sm:text-xl font-bold mt-4 text-red-800">
               {product.name}
             </h3>
-            <p className="text-gray-600 mt-2 text-sm sm:text-base">
+            <p className="text-gray-600 mt-2 font-[cursive] text-lg font-bold sm:text-base">
               {product.description
                 .split(" ")
                 .slice(0, 15)
                 .join(" ")}
               ...
             </p>
-            <button className="mt-4 bg-gradient-to-r from-red-800 to-pink-600 text-white px-4 py-2 rounded-full hover:scale-105 transition-transform">
+            <button className="mt-4 font-[cursive] bg-gradient-to-r from-red-800 to-pink-600 text-white px-4 py-2 rounded-full hover:scale-105 transition-transform">
               View Details
             </button>
           </div>
         ))}
       </div>
-      <div className="mt-8">
-        <div className="buttton text-left">
-          <Link href="/allproducts">
-            <div className="box">V</div>
-          </Link>
-          <Link href="/allproducts">
-            <div className="box">I</div>
-          </Link>
-          <Link href="/allproducts">
-            <div className="box">E</div>
-          </Link>
-          <Link href="/allproducts">
-            <div className="box">W</div>
-          </Link>
-        </div>
+      <div class="flex justify-end">
+        <Link
+          href="/allproducts"
+          className="mt-6 buttton bg-red-700 text-white border border-red-800 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group inline-block"
+        >
+          <span className="bg-pink-800 font-[cursive] shadow-red-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+          View More....
+        </Link>
       </div>
 
       {selectedProduct && (
