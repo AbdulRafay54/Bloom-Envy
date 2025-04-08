@@ -44,7 +44,7 @@ const Navbar = () => {
 
       <div className="container mx-auto flex justify-between items-center p-4">
         <div className="text-2xl font-semibold text-white">
-          <Link href="#home">
+          <Link href="/">
             <span className="text-red-800 text-3xl name ">Bloom </span>
             <span className="text-pink-600 text-3xl name">Envy</span>
           </Link>
@@ -60,7 +60,7 @@ const Navbar = () => {
 
         <div className="hidden md:flex space-x-8">
           <Link
-            href="#home"
+            href="/"
             className="nav-link hover:text-red-800 hover:text-pink-600 transition-colors duration-300 font-[cursive]"
           >
             Home
@@ -88,8 +88,8 @@ const Navbar = () => {
 
       <div className={`md:hidden ${isOpen ? "block" : "hidden"} p-4`}>
         <Link
-          href="#home"
-          className="nav-link block py-2 text-center font-[cursive]"
+          href="/"
+          className="nav-link  block py-2 text-center font-[cursive]"
           onClick={toggleMenu}
         >
           Home
@@ -119,5 +119,7 @@ const Navbar = () => {
     </nav>
   );
 };
+
+
 
 export default Navbar;

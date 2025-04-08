@@ -40,14 +40,14 @@ const About = () => {
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 font-[cursive]">
               Why Choose Us
             </h2>
-            <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 font-[cursive]">
+            <p className="text-base   max-sm:text-[21px] max-sm:font-bold sm:text-lg text-gray-700 leading-relaxed mb-4 font-[cursive]">
               At <span className="text-red-800 font-semibold name">Bloom</span>
               <span className="text-pink-600 font-semibold name"> Envy</span>,
               we don’t just sell flowers—we craft emotions. Every bloom is
               handpicked and arranged with love to bring joy, beauty, and
               elegance to your moments.
             </p>
-            <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-[cursive]">
+            <p className="text-base max-sm:text-[21px] max-sm:font-bold sm:text-lg text-gray-700 leading-relaxed font-[cursive]">
               Whether it's a celebration, a heartfelt gesture, or just because,
               our exquisite floral designs speak louder than words, turning
               every occasion into a cherished memory.
