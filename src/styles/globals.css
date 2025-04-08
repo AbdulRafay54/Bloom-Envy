@@ -355,3 +355,101 @@ body {
     transform: rotate(390deg);
   }
 }
+
+.portfolio-card {
+  background: linear-gradient(
+    110.49deg,
+    #fce1f0 19.95%,  
+    #ffd1e3 67.64%,   
+    #ffb8d6 107.08%,  
+    #ff9fc9 156.61%,  
+    #ff88c0 183.21%   
+  );
+  padding: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  border-radius: 30px;
+  text-align: center;
+  border: 2px solid transparent; 
+  box-shadow: 0 0 8px rgba(255, 20, 147, 0.2), 0 0 15px rgba(255, 20, 147, 0.1);  
+}
+
+.portfolio-card:hover {
+  transform: scale(1.02);
+  background: linear-gradient(
+    110.49deg,
+    #ffd1e3 19.95%, 
+    #ffb8d6 67.64%,   
+    #ff9fc9 107.08%, 
+    #ff88c0 156.61%,  
+    #ff66b3 183.21%   
+  ); 
+  box-shadow: 0 0 20px rgba(255, 20, 147, 0.3), 0 0 30px rgba(255, 20, 147, 0.2); 
+}
+
+.buttton {
+  display: flex;
+  justify-content: left; /* Text ko left align karne ke liye */
+}
+
+.box {
+  width: 35px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff; /* Text color white */
+  transition: all .8s;
+  cursor: pointer;
+  position: relative;
+  background: #9b1d20; /* Tailwind red-800 color */
+  overflow: hidden;
+}
+
+/* Default content in each box */
+.box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  background: #db2777; /* Tailwind pink-600 color */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+  transition: transform .4s;
+}
+
+/* Set content for each box individually */
+.buttton .box:nth-child(1):before {
+  content: "M";
+}
+
+.buttton .box:nth-child(2):before {
+  content: "O";
+}
+
+.buttton .box:nth-child(3):before {
+  content: "R";
+}
+
+.buttton .box:nth-child(4):before {
+  content: "E";
+}
+
+/* Hover effect to reveal content in each box */
+.buttton:hover .box:before {
+  transform: translateY(0);
+}
+
+.buttton .box:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.buttton .box:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 
 const products = [
@@ -5,11 +6,7 @@ const products = [
     id: 1,
     name: "Blue Ribbon Rose Bouquet",
     category: "Ribbon Flower",
-    images: [
-      "/images/about.png",
-      "/images/ribbon2.jpg",
-      "/images/ribbon3.jpg",
-    ],
+    images: ["/images/about.png", "/images/ribbon2.jpg", "/images/ribbon3.jpg"],
     description:
       "A unique and artistic rose crafted entirely from blue ribbon, showcasing intricate design and elegance. Perfect for adding a special touch to gifts or décor.",
     price: "$49.99",
@@ -19,6 +16,66 @@ const products = [
   },
   {
     id: 2,
+    name: "Chocolate Love Delight",
+    category: "Chocolate",
+    images: [
+      "/images/chocolate1.jpg",
+      "/images/chocolate2.jpg",
+      "/images/chocolate3.jpg",
+    ],
+    description: "A bouquet filled with chocolates and sweet surprises.",
+    price: "$29.99",
+    location: "California, USA",
+    delivery: "Standard Delivery",
+    daysToDeliver: "5-7 Days",
+  },
+  {
+    id: 3,
+    name: "Chocolate Love Delight",
+    category: "Chocolate",
+    images: [
+      "/images/chocolate1.jpg",
+      "/images/chocolate2.jpg",
+      "/images/chocolate3.jpg",
+    ],
+    description: "A bouquet filled with chocolates and sweet surprises.",
+    price: "$29.99",
+    location: "California, USA",
+    delivery: "Standard Delivery",
+    daysToDeliver: "5-7 Days",
+  },
+  {
+    id: 3,
+    name: "Chocolate Love Delight",
+    category: "Chocolate",
+    images: [
+      "/images/chocolate1.jpg",
+      "/images/chocolate2.jpg",
+      "/images/chocolate3.jpg",
+    ],
+    description: "A bouquet filled with chocolates and sweet surprises.",
+    price: "$29.99",
+    location: "California, USA",
+    delivery: "Standard Delivery",
+    daysToDeliver: "5-7 Days",
+  },
+  {
+    id: 3,
+    name: "Chocolate Love Delight",
+    category: "Chocolate",
+    images: [
+      "/images/chocolate1.jpg",
+      "/images/chocolate2.jpg",
+      "/images/chocolate3.jpg",
+    ],
+    description: "A bouquet filled with chocolates and sweet surprises.",
+    price: "$29.99",
+    location: "California, USA",
+    delivery: "Standard Delivery",
+    daysToDeliver: "5-7 Days",
+  },
+  {
+    id: 3,
     name: "Chocolate Love Delight",
     category: "Chocolate",
     images: [
@@ -45,10 +102,12 @@ const Modal = ({ product, onClose }) => {
     <div className="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-md z-50 flex items-center justify-center">
       <div className="bg-white w-full h-full p-8 overflow-y-auto relative rounded-lg">
         <button
-          className={`absolute top-4 right-6 text-5xl font-bold ${isClicked ? "text-red-700" : "text-gray-700"} hover:text-red-700 transition-all`}
-          onClick={() => { 
+          className={`absolute top-4 right-6 text-5xl font-bold ${
+            isClicked ? "text-red-700" : "text-gray-700"
+          } hover:text-red-700 transition-all`}
+          onClick={() => {
             onClose();
-            setIsClicked(true); 
+            setIsClicked(true);
           }}
         >
           &times;
@@ -69,7 +128,9 @@ const Modal = ({ product, onClose }) => {
                   src={img}
                   alt="Thumbnail"
                   className={`h-20 w-20 object-cover rounded-lg border-2 cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105 ${
-                    activeImage === img ? "border-red-500" : "border-transparent"
+                    activeImage === img
+                      ? "border-red-500"
+                      : "border-transparent"
                   }`}
                   onClick={() => setActiveImage(img)}
                 />
@@ -79,51 +140,73 @@ const Modal = ({ product, onClose }) => {
 
           {/* Right Section (Product Details) */}
           <div className="flex-1">
-            <h2 className="text-3xl font-bold text-red-800 mb-4">{product.name}</h2>
+            <h2 className="text-3xl font-bold text-red-800 mb-4">
+              {product.name}
+            </h2>
 
             <div className="mb-4">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Product Description</h3>
-              <p className="text-gray-700 text-lg leading-relaxed">{product.description}</p>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                Product Description
+              </h3>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                {product.description}
+              </p>
             </div>
 
             <div className="mb-4">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Product Details</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                Product Details
+              </h3>
               <div className="flex justify-between">
                 <div className="text-lg font-semibold">
                   <span className="text-red-600">Price:</span> {product.price}
                 </div>
                 <div className="text-lg font-semibold">
-                  <span className="text-red-600">Location:</span> {product.location}
+                  <span className="text-red-600">Location:</span>{" "}
+                  {product.location}
                 </div>
               </div>
               <div className="text-lg font-semibold mt-2">
-                <span className="text-red-600">Delivery:</span> {product.delivery}
+                <span className="text-red-600">Delivery:</span>{" "}
+                {product.delivery}
               </div>
               <div className="text-lg font-semibold mt-2">
-                <span className="text-red-600">Expected Delivery:</span> {product.daysToDeliver}
+                <span className="text-red-600">Expected Delivery:</span>{" "}
+                {product.daysToDeliver}
               </div>
             </div>
 
             {/* Additional Information */}
             <div className="mb-4">
               <div className="text-lg font-semibold mb-2">
-                <span className="text-red-600">Fast Delivery:</span> Yes, within {product.daysToDeliver} days
+                <span className="text-red-600">Fast Delivery:</span> Yes, within{" "}
+                {product.daysToDeliver} days
               </div>
               <div className="text-lg font-semibold mb-4">
-                <span className="text-red-600">Delivery Across Pakistan:</span> Available
+                <span className="text-red-600">Delivery Across Pakistan:</span>{" "}
+                Available
               </div>
             </div>
 
             {/* Rating & Tags */}
             <div className="mb-4">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Rating & Tags</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                Rating & Tags
+              </h3>
               <div className="flex items-center mb-2">
-                <span className="text-yellow-500">★★★★☆</span> {/* Example rating */}
-                <span className="ml-2 text-gray-600">(4.5/5 - 120 reviews)</span>
+                <span className="text-yellow-500">★★★★☆</span>{" "}
+                {/* Example rating */}
+                <span className="ml-2 text-gray-600">
+                  (4.5/5 - 120 reviews)
+                </span>
               </div>
               <div className="flex gap-2">
-                <span className="px-4 py-2 text-sm bg-gray-200 rounded-full text-gray-700">Popular</span>
-                <span className="px-4 py-2 text-sm bg-gray-200 rounded-full text-gray-700">Trending</span>
+                <span className="px-4 py-2 text-sm bg-gray-200 rounded-full text-gray-700">
+                  Popular
+                </span>
+                <span className="px-4 py-2 text-sm bg-gray-200 rounded-full text-gray-700">
+                  Trending
+                </span>
               </div>
             </div>
 
@@ -151,22 +234,22 @@ const Products = () => {
   return (
     <div className="min-h-screen py-20 px-6 lg:px-20 ">
       <div className="text-center about mb-12">
-      <h1 className="text-4xl name sm:text-5xl font-semibold tracking-wide group hover:text-pink-600 transition-colors duration-300 font-serif">
-            <span className="text-red-800 group-hover:text-pink-600 transition-colors duration-300">
-              Our
-            </span>
-            <span className="text-pink-600 group-hover:text-red-800 transition-colors duration-300">
-              {" "}
-              Products
-            </span>
-          </h1>
+        <h1 className="text-4xl name sm:text-5xl font-semibold tracking-wide group hover:text-pink-600 transition-colors duration-300 font-serif">
+          <span className="text-red-800 group-hover:text-pink-600 transition-colors duration-300">
+            Our
+          </span>
+          <span className="text-pink-600 group-hover:text-red-800 transition-colors duration-300">
+            {" "}
+            Products
+          </span>
+        </h1>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {products.map((product) => (
           <div
             key={product.id}
-            className="bg-white p-6 rounded-lg shadow-lg border-2 border-transparent hover:border-pink-400 hover:shadow-[0_0_15px_#ff1493] hover:scale-105 transition-all duration-300 cursor-pointer"
+            className="portfolio-card p-6 rounded-lg shadow-lg hover:shadow-[inset_0_0_25px_#ff1493, inset_0_0_25px_#ff3366] hover:scale-105 transition-all duration-300 cursor-pointer"
             onClick={() => setSelectedProduct(product)}
           >
             <img
@@ -178,13 +261,33 @@ const Products = () => {
               {product.name}
             </h3>
             <p className="text-gray-600 mt-2 text-sm sm:text-base">
-              {product.description.split(" ").slice(0, 15).join(" ")}...
+              {product.description
+                .split(" ")
+                .slice(0, 15)
+                .join(" ")}
+              ...
             </p>
             <button className="mt-4 bg-gradient-to-r from-red-800 to-pink-600 text-white px-4 py-2 rounded-full hover:scale-105 transition-transform">
               View Details
             </button>
           </div>
         ))}
+      </div>
+      <div className="mt-8">
+        <div className="buttton text-left">
+          <Link href="/allproducts">
+            <div className="box">V</div>
+          </Link>
+          <Link href="/allproducts">
+            <div className="box">I</div>
+          </Link>
+          <Link href="/allproducts">
+            <div className="box">E</div>
+          </Link>
+          <Link href="/allproducts">
+            <div className="box">W</div>
+          </Link>
+        </div>
       </div>
 
       {selectedProduct && (
