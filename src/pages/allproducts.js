@@ -4,27 +4,110 @@ import { useState } from "react";
 const allProducts = [
   {
     id: 1,
-    name: "Blue Ribbon Rose Bouquet",
-    category: "Ribbon Flower",
-    images: ["/images/about.png", "/images/ribbon2.jpg", "/images/ribbon3.jpg"],
+    name: "Giant Snack Bouquet",
+    category: "Snack Bouquet",
+    images: [
+      "/images/snack3.jpeg",
+      "/images/snack2.jpeg",
+      "/images/snack1.jpeg",
+    ],
     description:
-      "A unique and artistic rose crafted entirely from blue ribbon...",
-    price: "$49.99",
-    location: "New York, USA",
-    delivery: "Free Delivery",
+      "Giant Snack Bouquet is the perfect gift for any occasion, whether it's a birthday, anniversary, or special event. Filled with a variety of delicious snacks, it's a fun and thoughtful way to show someone you care.",
+    price: "₨ 1500",
+    location: "Karachi, Pakistan",
+    delivery: "Based on location",
+    daysToDeliver: "3-5 Days",
+  },
+  {
+    id: 2,
+    name: "You Chocolate Bouquet",
+    category: "Chocolate Bouquet",
+    images: ["/images/youchoc2.jpeg", "/images/youchoc1.jpeg"],
+    description:
+      "You Chocolate Bouquet is the perfect gift for any occasion, whether it's a birthday, anniversary, or any special event. Made with delicious chocolate, it's a sweet and thoughtful way to show someone you care.",
+    price: "₨ 1500",
+    location: "Karachi, Pakistan",
+    delivery: "Based on location",
+    daysToDeliver: "3-5 Days",
+  },
+  {
+    id: 3,
+    name: "Mini Ribbon Rose Bouquet",
+    category: "Ribbon Flower",
+    images: [
+      "/images/minirose1.jpeg",
+      "/images/minirose2.jpeg",
+      "/images/minirose1.jpeg",
+    ],
+    description:
+      "Mini Rose Bouquet is an ideal gift for any occasion, be it a birthday, anniversary, or special celebration. Its charming roses make it a lovely and thoughtful way to express your care.",
+    price: "₨ 1500",
+    location: "Karachi, Pakistan",
+    delivery: "Based on location",
+    daysToDeliver: "3-5 Days",
+  },
+  {
+    id: 4,
+    name: "Glam Choco Bouquet",
+    category: "Jewellery and Chocolate Bouquet",
+    images: [
+      "/images/glamchoco2.jpeg",
+      "/images/glamchoco1.jpeg",
+      "/images/glamchoco3.jpeg",
+      "/images/glamchoco4.jpeg",
+    ],
+    description:
+      "Glam Choco Bouquet is a perfect gift for any occasion, whether it's a birthday, anniversary, or special event. With its rich and luxurious chocolates, it's a glamorous and thoughtful way to show someone you care.",
+    price: "₨ 1500",
+    location: "Karachi, Pakistan",
+    delivery: "Based on location",
+    daysToDeliver: "3-5 Days",
+  },
+  {
+    id: 5,
+    name: "Mini Chocolate Bouquet",
+    category: "Chocolate Bouquet",
+    images: [
+      "/images/minichoco1.jpeg",
+      "/images/minichoco2.jpeg",
+      "/images/minichoco3.jpeg",
+    ],
+    description:
+      "Mini Chocolate Bouquet is an ideal gift for kids on any occasion, whether it's a birthday, celebration, or special event. Filled with delicious chocolates, it's a sweet and fun way to make their day extra special.",
+    price: "₨ 1500",
+    location: "Karachi, Pakistan",
+    delivery: "Based on location",
+    daysToDeliver: "3-5 Days",
+  },
+  {
+    id: 6,
+    name: "Blue Ribbon Rose Bouquet",
+    category: "Ribbon Flower Bouquet",
+    images: [
+      "/images/rose1.jpeg",
+      "/images/rose2.jpeg",
+      "/images/rose3.jpeg",
+      "/images/rose4.jpeg",
+    ],
+    description:
+      "Ribbon Red Rose makes a beautiful gift for any occasion, be it a birthday, anniversary, or special celebration. Its stunning red ribbon design adds a unique and thoughtful touch to express your love and care",
+    price: "₨ 1500",
+    location: "Karachi, Pakistan",
+    delivery: "Based on location",
     daysToDeliver: "3-5 Days",
   },
   // Add more products...
 ];
+
 const Modal = ({ product, onClose }) => {
   const [activeImage, setActiveImage] = useState(product?.images[0]);
-  const [isClicked, setIsClicked] = useState(false); // To manage icon color change
+  const [isClicked, setIsClicked] = useState(false);
 
   if (!product) return null;
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-md z-50 flex items-center justify-center">
-      <div className="bg-white w-full h-full p-8 overflow-y-auto relative rounded-lg">
+      <div className="bg-white w-full max-w-7xl h-full p-8 overflow-y-auto relative rounded-lg shadow-xl">
         <button
           className={`absolute top-4 right-6 text-5xl font-bold ${
             isClicked ? "text-red-700" : "text-gray-700"
@@ -60,11 +143,28 @@ const Modal = ({ product, onClose }) => {
                 />
               ))}
             </div>
+             {/* Download Button */}
+             <div className="mt-4">
+              <div className="mt-4">
+                <a href={activeImage} download className="Btn">
+                  <svg
+                    className="svgIcon"
+                    viewBox="0 0 384 512"
+                    height="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path>
+                  </svg>
+                  <span className="icon2"></span>
+                  <span className="tooltip">Download</span>
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Right Section (Product Details) */}
           <div className="flex-1">
-            <h2 className="text-3xl font-bold text-red-800 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-red-800 mb-4">
               {product.name}
             </h2>
 
@@ -81,7 +181,7 @@ const Modal = ({ product, onClose }) => {
               <h3 className="text-xl font-semibold text-gray-800 mb-2">
                 Product Details
               </h3>
-              <div className="flex justify-between">
+              <div className="flex flex-col sm:flex-row sm:justify-between gap-4">
                 <div className="text-lg font-semibold">
                   <span className="text-red-600">Price:</span> {product.price}
                 </div>
@@ -119,9 +219,8 @@ const Modal = ({ product, onClose }) => {
               </h3>
               <div className="flex items-center mb-2">
                 <span className="text-yellow-500">★★★★☆</span>{" "}
-                {/* Example rating */}
                 <span className="ml-2 text-gray-600">
-                  (4.5/5 - 120 reviews)
+                  (4.5/5 - 35 reviews)
                 </span>
               </div>
               <div className="flex gap-2">
@@ -136,13 +235,8 @@ const Modal = ({ product, onClose }) => {
 
             {/* Call to Action Button */}
             <div className="mt-6 flex justify-between items-center">
-              <button className="button w-full sm:w-[535px]">
-                <span className="button_lg px-8 py-3">
-                  <span className="button_sl"></span>
-                  <span className="button_text text-white font-[cursive] font-semibold transition-all duration-500">
-                    Buy Now ➤
-                  </span>
-                </span>
+              <button className="w-full sm:w-[535px] bg-gradient-to-r from-red-800 to-pink-600 text-white px-8 py-3 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-pink-600 hover:to-red-800 transition duration-300">
+                Buy Now ➤
               </button>
             </div>
           </div>
@@ -151,56 +245,61 @@ const Modal = ({ product, onClose }) => {
     </div>
   );
 };
+
 const AllProducts = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   return (
-    <div className="min-h-screen py-20 px-6 lg:px-20">
-      <div className="text-center about mb-12">
-        <h1 className="text-4xl sm:text-5xl font-semibold tracking-wide group hover:text-pink-600 transition-colors duration-300 font-serif">
-          <span className="text-red-800 group-hover:text-pink-600">All</span>
-          <span className="text-pink-600 group-hover:text-red-800">
-            {" "}
-            Products
-          </span>
-        </h1>
-      </div>
+    <div className="min-h-screen py-20 px-6 lg:px-20 ">
+<div className="text-center about mb-12">
+  <h1 className="text-4xl name sm:text-5xl font-semibold tracking-wide group hover:text-pink-600 transition-colors duration-300 font-serif">
+    <span className="text-red-800 group-hover:text-pink-600 transition-colors duration-300">
+      Our
+    </span>
+    <span className="text-pink-600 group-hover:text-red-800 transition-colors duration-300">
+      {" "}
+      Products
+    </span>
+  </h1>
+</div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {allProducts.map((product) => (
-          <div
-            key={product.id}
-            className="portfolio-card p-6 rounded-lg shadow-lg hover:shadow-[inset_0_0_25px_#ff1493, inset_0_0_25px_#ff3366] hover:scale-105 transition-all duration-300 cursor-pointer"
-            onClick={() => setSelectedProduct(product)}
-          >
-            <img
-              src={product.images[0]}
-              alt={product.name}
-              className="w-full h-48 sm:h-56 md:h-64 object-cover rounded-lg"
-            />
-            <h3 className="text-lg sm:text-xl font-bold mt-4 text-red-800">
-              {product.name}
-            </h3>
-            <p className="text-gray-600 mt-2 text-sm sm:text-base">
-              {product.description
-                .split(" ")
-                .slice(0, 15)
-                .join(" ")}
-              ...
-            </p>
-            <button className="mt-4 bg-gradient-to-r from-red-800 to-pink-600 text-white px-4 py-2 rounded-full hover:scale-105 transition-transform">
-              View Details
-            </button>
-          </div>
-        ))}
-      </div>
-      {selectedProduct && (
-        <Modal
-          product={selectedProduct}
-          onClose={() => setSelectedProduct(null)}
-        />
-      )}
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+  {allProducts.map((product) => (
+    <div
+      key={product.id}
+      className="portfolio-card p-6 rounded-lg shadow-lg hover:shadow-[inset_0_0_25px_#ff1493, inset_0_0_25px_#ff3366] hover:scale-105 transition-all duration-300 cursor-pointer"
+      onClick={() => setSelectedProduct(product)}
+    >
+      <img
+        src={product.images[0]}
+        alt={product.name}
+        className="w-full  h-50 sm:h-56 md:h-64 object-cover rounded-lg"
+      />
+      <h3 className="text-lg font-[cursive] sm:text-xl font-bold mt-4 text-red-800">
+        {product.name}
+      </h3>
+      <p className="text-gray-600 mt-2 font-[cursive] text-lg font-bold sm:text-base">
+        {product.description
+          .split(" ")
+          .slice(0, 15)
+          .join(" ")}
+        ...
+      </p>
+      <button className="mt-4 font-[cursive] bg-gradient-to-r from-red-800 to-pink-600 text-white px-4 py-2 rounded-full hover:scale-105 transition-transform">
+        View Details
+      </button>
     </div>
+  ))}
+</div>
+
+
+{selectedProduct && (
+  <Modal
+    product={selectedProduct}
+    onClose={() => setSelectedProduct(null)}
+  />
+)}
+</div>
   );
 };
 

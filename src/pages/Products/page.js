@@ -15,7 +15,7 @@ const products = [
       "Giant Snack Bouquet is the perfect gift for any occasion, whether it's a birthday, anniversary, or special event. Filled with a variety of delicious snacks, it's a fun and thoughtful way to show someone you care.",
     price: "₨ 1500",
     location: "Karachi, Pakistan",
-    delivery: "Free Delivery",
+    delivery: "Based on location",
     daysToDeliver: "3-5 Days",
   },
   {
@@ -27,7 +27,7 @@ const products = [
       "You Chocolate Bouquet is the perfect gift for any occasion, whether it's a birthday, anniversary, or any special event. Made with delicious chocolate, it's a sweet and thoughtful way to show someone you care.",
     price: "₨ 1500",
     location: "Karachi, Pakistan",
-    delivery: "Free Delivery",
+    delivery: "Based on location",
     daysToDeliver: "3-5 Days",
   },
   {
@@ -43,7 +43,7 @@ const products = [
       "Mini Rose Bouquet is an ideal gift for any occasion, be it a birthday, anniversary, or special celebration. Its charming roses make it a lovely and thoughtful way to express your care.",
     price: "₨ 1500",
     location: "Karachi, Pakistan",
-    delivery: "Free Delivery",
+    delivery: "Based on location",
     daysToDeliver: "3-5 Days",
   },
   {
@@ -60,7 +60,7 @@ const products = [
       "Glam Choco Bouquet is a perfect gift for any occasion, whether it's a birthday, anniversary, or special event. With its rich and luxurious chocolates, it's a glamorous and thoughtful way to show someone you care.",
     price: "₨ 1500",
     location: "Karachi, Pakistan",
-    delivery: "Free Delivery",
+    delivery: "Based on location",
     daysToDeliver: "3-5 Days",
   },
   {
@@ -76,7 +76,7 @@ const products = [
       "Mini Chocolate Bouquet is an ideal gift for kids on any occasion, whether it's a birthday, celebration, or special event. Filled with delicious chocolates, it's a sweet and fun way to make their day extra special.",
     price: "₨ 1500",
     location: "Karachi, Pakistan",
-    delivery: "Free Delivery",
+    delivery: "Based on location",
     daysToDeliver: "3-5 Days",
   },
   {
@@ -93,7 +93,7 @@ const products = [
       "Ribbon Red Rose makes a beautiful gift for any occasion, be it a birthday, anniversary, or special celebration. Its stunning red ribbon design adds a unique and thoughtful touch to express your love and care",
     price: "₨ 1500",
     location: "Karachi, Pakistan",
-    delivery: "Free Delivery",
+    delivery: "Based on location",
     daysToDeliver: "3-5 Days",
   },
 ];
@@ -155,11 +155,7 @@ const Modal = ({ product, onClose }) => {
             {/* Download Button */}
             <div className="mt-4">
               <div className="mt-4">
-                <a
-                  href={activeImage}
-                  download
-                  className="Btn"
-                >
+                <a href={activeImage} download className="Btn">
                   <svg
                     className="svgIcon"
                     viewBox="0 0 384 512"
@@ -176,76 +172,76 @@ const Modal = ({ product, onClose }) => {
           </div>
 
           <div className="flex-1">
-            <h2 className="text-3xl font-bold text-red-800 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-red-800 mb-4">
               {product.name}
             </h2>
 
             <div className="mb-4">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              <h3 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-2">
                 Product Description
               </h3>
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <p className="text-gray-700 text-lg sm:text-xl leading-relaxed">
                 {product.description}
               </p>
             </div>
 
-            <div className="mb-4">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+            <div className="mb-6">
+              <h3 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-2">
                 Product Details
               </h3>
-              <div className="flex justify-between">
-                <div className="text-lg font-semibold">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="text-lg sm:text-xl font-semibold">
                   <span className="text-red-600">Price:</span> {product.price}
                 </div>
-                <div className="text-lg font-semibold">
+                <div className="text-lg sm:text-xl font-semibold">
                   <span className="text-red-600">Location:</span>{" "}
                   {product.location}
                 </div>
               </div>
-              <div className="text-lg font-semibold mt-2">
+              <div className="text-lg sm:text-xl font-semibold mt-4">
                 <span className="text-red-600">Delivery:</span>{" "}
                 {product.delivery}
               </div>
-              <div className="text-lg font-semibold mt-2">
+              <div className="text-lg sm:text-xl font-semibold mt-4 ">
                 <span className="text-red-600">Expected Delivery:</span>{" "}
-                {product.daysToDeliver}
+                {product.daysToDeliver} days
               </div>
             </div>
 
-            <div className="mb-4">
-              <div className="text-lg font-semibold mb-2">
-                <span className="text-red-600">Fast Delivery:</span> Yes, within{" "}
-                {product.daysToDeliver} days
-              </div>
-              <div className="text-lg font-semibold mb-4">
+            <div className="mb-6">
+              
+              <div className="text-lg sm:text-xl font-semibold">
                 <span className="text-red-600">Delivery Across Pakistan:</span>{" "}
                 Available
               </div>
             </div>
 
-            <div className="mb-4">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+            <div className="mb-6">
+              <h3 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4">
                 Rating & Tags
               </h3>
-              <div className="flex items-center mb-2">
-                <span className="text-yellow-500">★★★★☆</span>{" "}
-                <span className="ml-2 text-gray-600">
-                  (4.5/5 - 120 reviews)
+              <div className="flex items-center gap-2 mb-4">
+                <span className="text-yellow-500 text-2xl">★★★★☆</span>
+                <span className="text-gray-600 text-lg sm:text-xl">
+                  (4.5/5 - 35 reviews)
                 </span>
               </div>
-              <div className="flex gap-2">
-                <span className="px-4 py-2 text-sm bg-gray-200 rounded-full text-gray-700">
+              <div className="flex gap-4 flex-wrap">
+                <span className="px-4 py-2 text-sm sm:text-base bg-gray-200 rounded-full text-gray-700">
                   Popular
                 </span>
-                <span className="px-4 py-2 text-sm bg-gray-200 rounded-full text-gray-700">
+                <span className="px-4 py-2 text-sm sm:text-base bg-gray-200 rounded-full text-gray-700">
                   Trending
+                </span>
+                <span className="px-4 py-2 text-sm sm:text-base bg-gray-200 rounded-full text-gray-700">
+                  New Arrival
                 </span>
               </div>
             </div>
 
             <div className="mt-6 flex justify-between items-center">
               <button
-                className="button w-full sm:w-[535px]"
+                className="button w-full sm:w-[535px] text-lg sm:text-xl"
                 onClick={handleBuyNowClick}
               >
                 <span className="button_lg px-8 py-3">
@@ -329,3 +325,7 @@ const Products = () => {
 };
 
 export default Products;
+
+
+
+

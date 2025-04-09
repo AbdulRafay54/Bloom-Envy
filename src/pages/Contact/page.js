@@ -1,7 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+import Swal from "sweetalert2"; // SweetAlert2 ko import karen
 
 const Contact = () => {
+  // State variables for form inputs
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  // Form submit handler
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Check if any field is empty
+    if (!name || !email || !message) {
+      Swal.fire({
+        icon: "warning",
+        title: "Please fill out all fields",
+        confirmButtonText: "Okay",
+      });
+      return;
+    }
+
+    // If form is filled, show SweetAlert message
+    Swal.fire({
+      icon: "info",
+      title: "This feature will be coming soon",
+      confirmButtonText: "Got it!",
+    });
+
+    // Reset form fields
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
+
   return (
     <section id="contact" className="py-16 px-4 sm:px-6 lg:px-20">
       <div className="max-w-6xl mx-auto">
@@ -25,7 +58,7 @@ const Contact = () => {
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 font-[cursive]">
               Get In Touch
             </h2>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label className="block text-gray-800 mb-1" htmlFor="name">
                   Your Name
@@ -34,6 +67,9 @@ const Contact = () => {
                   className="w-full px-4 py-2 bg-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-300 transition duration-300"
                   placeholder="Enter your name"
                   type="text"
+                  id="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                 />
               </div>
               <div className="mb-4">
@@ -46,6 +82,8 @@ const Contact = () => {
                   name="email"
                   id="email"
                   type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="mb-4">
@@ -58,17 +96,18 @@ const Contact = () => {
                   placeholder="Enter your message"
                   name="message"
                   id="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
               </div>
-              <button className="button w-full sm:w-[535px]">
-  <span className="button_lg px-8 py-3">
-    <span className="button_sl"></span>
-    <span className="button_text text-white font-[cursive] font-semibold transition-all duration-500">
-      Send Message ➤
-    </span>
-  </span>
-</button>
-
+              <button className="button w-full sm:w-[535px]" type="submit">
+                <span className="button_lg px-8 py-3">
+                  <span className="button_sl"></span>
+                  <span className="button_text text-white font-[cursive] font-semibold transition-all duration-500">
+                    Send Message ➤
+                  </span>
+                </span>
+              </button>
             </form>
           </div>
 
@@ -82,24 +121,25 @@ const Contact = () => {
               className="rounded-2xl shadow-lg max-w-full h-[450px] opacity-60"
             />
             {/* Text Badge */}
-            <div className=" absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-sm sm:text-md font-semibold px-4 sm:px-6 py-2 font-[cursive]">
-              <button class="btn ">
-                <div className="wrapper  ">
+            <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-sm sm:text-md font-semibold px-4 sm:px-6 py-2 font-[cursive]">
+              <button className="btn ">
+                <div className="wrapper">
                   <p className="text ">Reach to us via</p>
 
+                  {/* Flower animation */}
                   <div className="flower flower1">
                     <div className="petal one"></div>
                     <div className="petal two"></div>
                     <div className="petal three"></div>
                     <div className="petal four"></div>
                   </div>
-                  <div class="flower flower2">
+                  <div className="flower flower2">
                     <div className="petal one"></div>
                     <div className="petal two"></div>
                     <div className="petal three"></div>
                     <div className="petal four"></div>
                   </div>
-                  <div class="flower flower3">
+                  <div className="flower flower3">
                     <div className="petal one"></div>
                     <div className="petal two"></div>
                     <div className="petal three"></div>
@@ -111,13 +151,13 @@ const Contact = () => {
                     <div className="petal three"></div>
                     <div className="petal four"></div>
                   </div>
-                  <div class="flower flower5">
+                  <div className="flower flower5">
                     <div className="petal one"></div>
                     <div className="petal two"></div>
                     <div className="petal three"></div>
                     <div className="petal four"></div>
                   </div>
-                  <div class="flower flower6">
+                  <div className="flower flower6">
                     <div className="petal one"></div>
                     <div className="petal two"></div>
                     <div className="petal three"></div>
