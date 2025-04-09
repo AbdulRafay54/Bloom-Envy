@@ -105,7 +105,7 @@ const Modal = ({ product, onClose }) => {
   if (!product) return null;
 
   const handleBuyNowClick = () => {
-    const message = `Hello Bloomenvy, Mujhe ye buy krna hai, details batain.`;
+    const message = `Hello Bloomenvy, I Want to buy this please sent me details`;
     const phoneNumber = "+923303049866";
 
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
