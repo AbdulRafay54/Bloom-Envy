@@ -13,7 +13,7 @@ const allProducts = [
     ],
     description:
       "Giant Snack Bouquet is the perfect gift for any occasion, whether it's a birthday, anniversary, or special event. Filled with a variety of delicious snacks, it's a fun and thoughtful way to show someone you care.",
-    price: "₨ 1500",
+    price: "PKR 1500",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
@@ -25,7 +25,7 @@ const allProducts = [
     images: ["/images/youchoc2.jpeg", "/images/youchoc1.jpeg"],
     description:
       "You Chocolate Bouquet is the perfect gift for any occasion, whether it's a birthday, anniversary, or any special event. Made with delicious chocolate, it's a sweet and thoughtful way to show someone you care.",
-    price: "₨ 1500",
+    price: "PKR 1500",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
@@ -41,7 +41,7 @@ const allProducts = [
     ],
     description:
       "Mini Rose Bouquet is an ideal gift for any occasion, be it a birthday, anniversary, or special celebration. Its charming roses make it a lovely and thoughtful way to express your care.",
-    price: "₨ 1500",
+    price: "PKR 300",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
@@ -58,7 +58,7 @@ const allProducts = [
     ],
     description:
       "Glam Choco Bouquet is a perfect gift for any occasion, whether it's a birthday, anniversary, or special event. With its rich and luxurious chocolates, it's a glamorous and thoughtful way to show someone you care.",
-    price: "₨ 1500",
+    price: "PKR 2300",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
@@ -74,14 +74,14 @@ const allProducts = [
     ],
     description:
       "Mini Chocolate Bouquet is an ideal gift for kids on any occasion, whether it's a birthday, celebration, or special event. Filled with delicious chocolates, it's a sweet and fun way to make their day extra special.",
-    price: "₨ 1500",
+    price: "PKR 250",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
   },
   {
     id: 6,
-    name: "Blue Ribbon Rose Bouquet",
+    name: "Red Ribbon Rose Bouquet",
     category: "Ribbon Flower Bouquet",
     images: [
       "/images/rose1.jpeg",
@@ -91,11 +91,126 @@ const allProducts = [
     ],
     description:
       "Ribbon Red Rose makes a beautiful gift for any occasion, be it a birthday, anniversary, or special celebration. Its stunning red ribbon design adds a unique and thoughtful touch to express your love and care",
-    price: "₨ 1500",
+    price: "PKR 850",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
   },
+  {
+    id: 7,
+    name: "Chocolate Delight Bouquett",
+    category: "Chocolate Bouquet",
+    images: [
+      "/images/printed1.jpeg",
+      "/images/printed2.jpeg",
+      "/images/printed3.jpeg",
+    ],
+    description:
+    "Chocolate Delight Bouquet makes a sweet gift for any occasion, be it a birthday, anniversary, or celebration. Filled with KitKat, Bisconni, and chocolates, it adds a delicious and joyful touch to express your love and care",
+    price: "PKR 1500",
+    location: "Karachi, Pakistan",
+    delivery: "Based on location",
+    daysToDeliver: "3-5 Days",
+  },
+  {
+    id: 8,
+    name: "DairyMilk Chocolate Bouquet",
+    category: "Chocolate Bouquet",
+    images: [
+      "/images/dairymilk1.jpeg",
+      "/images/dairymilk2.jpeg",
+      "/images/dairymilk3.jpeg",
+    ],
+    description:
+    "Dairy Milk Bouquet makes a perfect gift for any occasion, whether it's a birthday, anniversary, or special event. Filled with creamy Dairy Milk bars, it brings a sweet and thoughtful touch to show your love and affection",
+    price: "PKR 2100",
+    location: "Karachi, Pakistan",
+    delivery: "Based on location",
+    daysToDeliver: "3-5 Days",
+  },
+  {
+    id: 9,
+    name: "Single Blue Ribbon Rose",
+    category: "Ribbon Flower Bouquet",
+    images: [
+      "/images/ribbonblue.jpeg",
+     
+    ],
+    description:
+      "Single Blue Ribbon Rose is a graceful gift for any moment, whether it’s a birthday, anniversary, or special gesture. Its elegant blue ribbon design adds a peaceful and charming touch to convey your love and feelings",
+    price: "PKR 500",
+    location: "Karachi, Pakistan",
+    delivery: "Based on location",
+    daysToDeliver: "3-4 Days",
+  },
+  {
+    id: 10,
+    name: "Single Red Ribbon Rose",
+    category: "Ribbon Flower Bouquet",
+    images: [
+      "/images/red.jpeg",
+    
+    ],
+    description:
+      "Single Red Ribbon Rose is a lovely gift for any occasion, be it a birthday, anniversary, or romantic surprise. Its vibrant red ribbon design brings a warm and heartfelt touch to express your love and emotions",
+    price: "PKR 350",
+    location: "Karachi, Pakistan",
+    delivery: "Based on location",
+    daysToDeliver: "2-3 Days",
+  },
+  {
+    id: 11,
+    name: "Triple Red Ribbon Roses",
+    category: "Ribbon Flower Bouquet",
+    images: [
+      "/images/redbouquet2.jpeg",
+      "/images/redbouquet1.jpeg",
+      
+    ],
+    description:
+      "Triple Red Ribbon Roses make a romantic gift for special moments, be it a birthday, anniversary, or surprise gesture. Their rich red ribbon design adds a meaningful and elegant touch to express deep love and affection",
+    price: "PKR 750",
+    location: "Karachi, Pakistan",
+    delivery: "Based on location",
+    daysToDeliver: "2-4 Days",
+  },
+  {
+    id: 12,
+    name: "Deluxe Snacks Basket",
+    category: "Gift Basket",
+    images: [
+      "/images/basket3.jpeg",
+      "/images/basket2.jpeg",
+      "/images/basket1.jpeg",
+      "/images/basket4.jpeg",
+    ],
+    description:
+      "Deluxe Snacks Basket is a fun and tasty gift for any event, whether it’s a birthday, get-together, or celebration. Filled with assorted snacks and goodies, it adds a joyful and flavorful touch to share happiness and care",
+    price: "PKR 3000",
+    location: "Karachi, Pakistan",
+    delivery: "Based on location",
+    daysToDeliver: "2-4 Days",
+  },
+  {
+    id: 12,
+    name: "Premium Snacks Basket",
+    category: "Gift Basket",
+    images: [
+      "/images/sbasket1.jpeg",
+      "/images/sbasket2.jpeg",
+    ],
+    description:
+      "Premium Snacks Basket makes a cheerful gift for any occasion, be it a birthday, movie night, or casual hangout. Packed with a variety of tasty treats, it offers a delightful and thoughtful way to enjoy and share the moment",
+    price: "PKR 2500",
+    location: "Karachi, Pakistan",
+    delivery: "Based on location",
+    daysToDeliver: "2-4 Days",
+  }
+  
+  
+  
+  
+  
   // Add more products...
 ];
 
@@ -143,8 +258,8 @@ const Modal = ({ product, onClose }) => {
                 />
               ))}
             </div>
-             {/* Download Button */}
-             <div className="mt-4">
+            {/* Download Button */}
+            <div className="mt-4">
               <div className="mt-4">
                 <a href={activeImage} download className="Btn">
                   <svg
@@ -202,10 +317,7 @@ const Modal = ({ product, onClose }) => {
 
             {/* Additional Information */}
             <div className="mb-4">
-              <div className="text-lg font-semibold mb-2">
-                <span className="text-red-600">Fast Delivery:</span> Yes, within{" "}
-                {product.daysToDeliver} days
-              </div>
+              
               <div className="text-lg font-semibold mb-4">
                 <span className="text-red-600">Delivery Across Pakistan:</span>{" "}
                 Available
@@ -219,9 +331,7 @@ const Modal = ({ product, onClose }) => {
               </h3>
               <div className="flex items-center mb-2">
                 <span className="text-yellow-500">★★★★☆</span>{" "}
-                <span className="ml-2 text-gray-600">
-                  (4.5/5 - 35 reviews)
-                </span>
+                <span className="ml-2 text-gray-600">(4.5/5 - 35 reviews)</span>
               </div>
               <div className="flex gap-2">
                 <span className="px-4 py-2 text-sm bg-gray-200 rounded-full text-gray-700">
@@ -251,55 +361,54 @@ const AllProducts = () => {
 
   return (
     <div className="min-h-screen py-20 px-6 lg:px-20 ">
-<div className="text-center about mb-12">
-  <h1 className="text-4xl name sm:text-5xl font-semibold tracking-wide group hover:text-pink-600 transition-colors duration-300 font-serif">
-    <span className="text-red-800 group-hover:text-pink-600 transition-colors duration-300">
-      Our
-    </span>
-    <span className="text-pink-600 group-hover:text-red-800 transition-colors duration-300">
-      {" "}
-      Products
-    </span>
-  </h1>
-</div>
+      <div className="text-center about mb-12">
+        <h1 className="text-4xl name sm:text-5xl font-semibold tracking-wide group hover:text-pink-600 transition-colors duration-300 font-serif">
+          <span className="text-red-800 group-hover:text-pink-600 transition-colors duration-300">
+            All
+          </span>
+          <span className="text-pink-600 group-hover:text-red-800 transition-colors duration-300">
+            {" "}
+            Products
+          </span>
+        </h1>
+      </div>
 
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-  {allProducts.map((product) => (
-    <div
-      key={product.id}
-      className="portfolio-card p-6 rounded-lg shadow-lg hover:shadow-[inset_0_0_25px_#ff1493, inset_0_0_25px_#ff3366] hover:scale-105 transition-all duration-300 cursor-pointer"
-      onClick={() => setSelectedProduct(product)}
-    >
-      <img
-        src={product.images[0]}
-        alt={product.name}
-        className="w-full  h-50 sm:h-56 md:h-64 object-cover rounded-lg"
-      />
-      <h3 className="text-lg font-[cursive] sm:text-xl font-bold mt-4 text-red-800">
-        {product.name}
-      </h3>
-      <p className="text-gray-600 mt-2 font-[cursive] text-lg font-bold sm:text-base">
-        {product.description
-          .split(" ")
-          .slice(0, 15)
-          .join(" ")}
-        ...
-      </p>
-      <button className="mt-4 font-[cursive] bg-gradient-to-r from-red-800 to-pink-600 text-white px-4 py-2 rounded-full hover:scale-105 transition-transform">
-        View Details
-      </button>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {allProducts.map((product) => (
+          <div
+            key={product.id}
+            className="portfolio-card p-6 rounded-lg shadow-lg hover:shadow-[inset_0_0_25px_#ff1493, inset_0_0_25px_#ff3366] hover:scale-105 transition-all duration-300 cursor-pointer"
+            onClick={() => setSelectedProduct(product)}
+          >
+            <img
+              src={product.images[0]}
+              alt={product.name}
+              className="w-full h-80 object-cover rounded-lg"
+            />
+            <h3 className="text-lg font-[cursive] sm:text-xl font-bold mt-4 text-red-800">
+              {product.name}
+            </h3>
+            <p className="text-gray-600 mt-2 font-[cursive] text-lg font-bold sm:text-base">
+              {product.description
+                .split(" ")
+                .slice(0, 15)
+                .join(" ")}
+              ...
+            </p>
+            <button className="mt-4 font-[cursive] bg-gradient-to-r from-red-800 to-pink-600 text-white px-4 py-2 rounded-full hover:scale-105 transition-transform">
+              View Details
+            </button>
+          </div>
+        ))}
+      </div>
+
+      {selectedProduct && (
+        <Modal
+          product={selectedProduct}
+          onClose={() => setSelectedProduct(null)}
+        />
+      )}
     </div>
-  ))}
-</div>
-
-
-{selectedProduct && (
-  <Modal
-    product={selectedProduct}
-    onClose={() => setSelectedProduct(null)}
-  />
-)}
-</div>
   );
 };
 

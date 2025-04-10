@@ -13,7 +13,7 @@ const products = [
     ],
     description:
       "Giant Snack Bouquet is the perfect gift for any occasion, whether it's a birthday, anniversary, or special event. Filled with a variety of delicious snacks, it's a fun and thoughtful way to show someone you care.",
-    price: "₨ 1500",
+    price: "PKR 1500",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
@@ -25,7 +25,7 @@ const products = [
     images: ["/images/youchoc2.jpeg", "/images/youchoc1.jpeg"],
     description:
       "You Chocolate Bouquet is the perfect gift for any occasion, whether it's a birthday, anniversary, or any special event. Made with delicious chocolate, it's a sweet and thoughtful way to show someone you care.",
-    price: "₨ 1500",
+    price: "PKR 1500",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
@@ -41,7 +41,7 @@ const products = [
     ],
     description:
       "Mini Rose Bouquet is an ideal gift for any occasion, be it a birthday, anniversary, or special celebration. Its charming roses make it a lovely and thoughtful way to express your care.",
-    price: "₨ 1500",
+    price: "PKR 300",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
@@ -58,7 +58,7 @@ const products = [
     ],
     description:
       "Glam Choco Bouquet is a perfect gift for any occasion, whether it's a birthday, anniversary, or special event. With its rich and luxurious chocolates, it's a glamorous and thoughtful way to show someone you care.",
-    price: "₨ 1500",
+    price: "PKR 2300",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
@@ -74,14 +74,14 @@ const products = [
     ],
     description:
       "Mini Chocolate Bouquet is an ideal gift for kids on any occasion, whether it's a birthday, celebration, or special event. Filled with delicious chocolates, it's a sweet and fun way to make their day extra special.",
-    price: "₨ 1500",
+    price: "PKR 250",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
   },
   {
     id: 6,
-    name: "Blue Ribbon Rose Bouquet",
+    name: "Red Ribbon Rose Bouquet",
     category: "Ribbon Flower Bouquet",
     images: [
       "/images/rose1.jpeg",
@@ -91,7 +91,7 @@ const products = [
     ],
     description:
       "Ribbon Red Rose makes a beautiful gift for any occasion, be it a birthday, anniversary, or special celebration. Its stunning red ribbon design adds a unique and thoughtful touch to express your love and care",
-    price: "₨ 1500",
+    price: "PKR 850",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
@@ -209,7 +209,6 @@ const Modal = ({ product, onClose }) => {
             </div>
 
             <div className="mb-6">
-              
               <div className="text-lg sm:text-xl font-semibold">
                 <span className="text-red-600">Delivery Across Pakistan:</span>{" "}
                 Available
@@ -286,8 +285,9 @@ const Products = () => {
             <img
               src={product.images[0]}
               alt={product.name}
-              className="w-full  h-50 sm:h-56 md:h-64 object-cover rounded-lg"
+              className="w-full h-80 object-cover rounded-lg"
             />
+
             <h3 className="text-lg font-[cursive] sm:text-xl font-bold mt-4 text-red-800">
               {product.name}
             </h3>
@@ -325,7 +325,3 @@ const Products = () => {
 };
 
 export default Products;
-
-
-
-
