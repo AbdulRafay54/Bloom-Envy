@@ -17,6 +17,10 @@ const products = [
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
+    reviews: {
+      rating: 4.5,
+      totalReviews: 45,
+    },
   },
   {
     id: 2,
@@ -29,6 +33,10 @@ const products = [
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
+    reviews: {
+      rating: 4.5,
+      totalReviews: 37,
+    },
   },
   {
     id: 3,
@@ -45,6 +53,10 @@ const products = [
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
+    reviews: {
+      rating: 4.5,
+      totalReviews: 37,
+    },
   },
   {
     id: 4,
@@ -62,6 +74,10 @@ const products = [
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
+    reviews: {
+      rating: 4.5,
+      totalReviews: 36,
+    },
   },
   {
     id: 5,
@@ -78,6 +94,10 @@ const products = [
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
+    reviews: {
+      rating: 4.5,
+      totalReviews: 38,
+    },
   },
   {
     id: 6,
@@ -95,6 +115,10 @@ const products = [
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
+    reviews: {
+      rating: 4.5,
+      totalReviews: 35,
+    },
   },
 ];
 
@@ -152,7 +176,6 @@ const Modal = ({ product, onClose }) => {
               ))}
             </div>
 
-            {/* Download Button */}
             <div className="mt-4">
               <div className="mt-4">
                 <a href={activeImage} download className="Btn">
@@ -171,84 +194,102 @@ const Modal = ({ product, onClose }) => {
             </div>
           </div>
 
+          {/* Right Section (Product Details) */}
           <div className="flex-1">
-            <h2 className="text-3xl sm:text-4xl font-bold text-red-800 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-red-800 via-pink-600 to-red-800 bg-clip-text text-transparent mb-4">
               {product.name}
             </h2>
 
             <div className="mb-4">
-              <h3 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-2">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
                 Product Description
               </h3>
-              <p className="text-gray-700 text-lg sm:text-xl leading-relaxed">
+              <p className="text-gray-700 text-lg leading-relaxed">
                 {product.description}
               </p>
             </div>
 
-            <div className="mb-6">
-              <h3 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-2">
+            <div className="mb-4">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
                 Product Details
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="text-lg sm:text-xl font-semibold">
+              <div className="flex flex-col sm:flex-row sm:justify-between gap-4">
+                <div className="text-lg font-semibold">
                   <span className="text-red-600">Price:</span> {product.price}
                 </div>
-                <div className="text-lg sm:text-xl font-semibold">
+                <div className="text-lg font-semibold">
                   <span className="text-red-600">Location:</span>{" "}
                   {product.location}
                 </div>
               </div>
-              <div className="text-lg sm:text-xl font-semibold mt-4">
+              <div className="text-lg font-semibold mt-2">
                 <span className="text-red-600">Delivery:</span>{" "}
                 {product.delivery}
               </div>
-              <div className="text-lg sm:text-xl font-semibold mt-4 ">
+              <div className="text-lg font-semibold mt-2">
                 <span className="text-red-600">Expected Delivery:</span>{" "}
-                {product.daysToDeliver} days
+                {product.daysToDeliver}
               </div>
             </div>
 
-            <div className="mb-6">
-              <div className="text-lg sm:text-xl font-semibold">
-                <span className="text-red-600">Delivery Across Pakistan:</span>{" "}
-                Available
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4">
-                Rating & Tags
+            {/* Reviews */}
+            <div className="mb-4">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                Reviews
               </h3>
-              <div className="flex items-center gap-2 mb-4">
-                <span className="text-yellow-500 text-2xl">★★★★☆</span>
-                <span className="text-gray-600 text-lg sm:text-xl">
-                  (4.5/5 - 35 reviews)
+              <div className="flex items-center mb-2">
+                <span className="text-yellow-500">
+                  {Array.from({
+                    length: Math.floor(product.reviews.rating),
+                  }).map((_, index) => (
+                    <span key={index}>★</span>
+                  ))}
+                  {product.reviews.rating % 1 !== 0 && "☆"}
+                </span>
+                <span className="ml-2 text-gray-600">
+                  ({product.reviews.rating}/5 - {product.reviews.totalReviews}{" "}
+                  reviews)
                 </span>
               </div>
-              <div className="flex gap-4 flex-wrap">
-                <span className="px-4 py-2 text-sm sm:text-base bg-gray-200 rounded-full text-gray-700">
-                  Popular
-                </span>
-                <span className="px-4 py-2 text-sm sm:text-base bg-gray-200 rounded-full text-gray-700">
-                  Trending
-                </span>
-                <span className="px-4 py-2 text-sm sm:text-base bg-gray-200 rounded-full text-gray-700">
-                  New Arrival
-                </span>
-              </div>
+            </div>
+
+            {/* Payment Policy */}
+            <div className="mb-4">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                Payment Policy
+              </h3>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                To confirm your order,{" "}
+                <span className="text-red-600 font-semibold">
+                  50% advance payment
+                </span>{" "}
+                is required. Once your bouquet is ready, we will share its
+                picture with you for approval. After your confirmation, the
+                remaining 50% will be collected and your order will be
+                delivered.
+              </p>
+            </div>
+
+            <div className="text-lg font-semibold mb-4">
+              <span className="text-red-600">Delivery Across Pakistan:</span>{" "}
+              Available
+            </div>
+
+            <div className="mt-4 font-semibold text-lg">
+              <span className="text-red-700">*</span>{" "}
+              <span className="text-gray-800">Please</span>{" "}
+              <span className="text-pink-600 font-bold">select</span> and{" "}
+              <span className="text-pink-600 font-bold">download</span> your
+              preferred <span className="text-red-700 font-bold">image</span>{" "}
+              first. Then click{" "}
+              <span className="text-pink-600 font-bold">"Buy Now"</span> to
+              place your order with this image on{" "}
+              <span className="text-green-600 font-bold">WhatsApp</span>.
             </div>
 
             <div className="mt-6 flex justify-between items-center">
-              <button
-                className="button w-full sm:w-[535px] text-lg sm:text-xl"
-                onClick={handleBuyNowClick}
-              >
-                <span className="button_lg px-8 py-3">
-                  <span className="button_sl"></span>
-                  <span className="button_text text-white font-[cursive] font-semibold transition-all duration-500">
-                    Buy Now ➤
-                  </span>
-                </span>
+              <button className="w-full sm:w-[535px] bg-gradient-to-r from-red-800 to-pink-600 text-white px-8 py-3 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-pink-600 hover:to-red-800 transition duration-300">
+                Buy Now ➤
               </button>
             </div>
           </div>
@@ -304,15 +345,16 @@ const Products = () => {
           </div>
         ))}
       </div>
-      <div class="flex justify-end">
-        <Link
-          href="/allproducts"
-          className="mt-6 buttton bg-red-700 text-white border border-red-800 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group inline-block"
-        >
-          <span className="bg-pink-800 font-[cursive] shadow-red-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
-          View More....
-        </Link>
-      </div>
+      <div className="flex justify-end">
+  <Link
+    href="/allproducts"
+    className="mt-6 z-30 buttton bg-gradient-to-r from-red-800 to-pink-600 text-white border border-rose-800 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md text-lg transition-all duration-700 [text-shadow:3px_5px_2px_#be123c] hover:bg-pink-500 hover:bg-none active:opacity-75 outline-none group"
+  >
+    <span className="after:absolute after:h-1 after:w-1 after:bg-rose-800 after:left-3 after:bottom-0 after:translate-y-full after:rounded-md after:-z-20 group-hover:after:scale-[300] after:transition-all after:duration-700"></span>
+    View More...
+  </Link>
+</div>
+
 
       {selectedProduct && (
         <Modal

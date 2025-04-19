@@ -17,6 +17,10 @@ const allProducts = [
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
+    reviews: {
+      rating: 4.5,
+      totalReviews: 45,
+    },
   },
   {
     id: 2,
@@ -29,6 +33,10 @@ const allProducts = [
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
+    reviews: {
+      rating: 4.5,
+      totalReviews: 37,
+    },
   },
   {
     id: 3,
@@ -45,6 +53,10 @@ const allProducts = [
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
+    reviews: {
+      rating: 4.5,
+      totalReviews: 37,
+    },
   },
   {
     id: 4,
@@ -62,6 +74,10 @@ const allProducts = [
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
+    reviews: {
+      rating: 4.5,
+      totalReviews: 36,
+    },
   },
   {
     id: 5,
@@ -78,6 +94,10 @@ const allProducts = [
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
+    reviews: {
+      rating: 4.5,
+      totalReviews: 38,
+    },
   },
   {
     id: 6,
@@ -95,6 +115,10 @@ const allProducts = [
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
+    reviews: {
+      rating: 4.5,
+      totalReviews: 35,
+    },
   },
   {
     id: 7,
@@ -106,11 +130,15 @@ const allProducts = [
       "/images/printed3.jpeg",
     ],
     description:
-    "Chocolate Delight Bouquet makes a sweet gift for any occasion, be it a birthday, anniversary, or celebration. Filled with KitKat, Bisconni, and chocolates, it adds a delicious and joyful touch to express your love and care",
+      "Chocolate Delight Bouquet makes a sweet gift for any occasion, be it a birthday, anniversary, or celebration. Filled with KitKat, Bisconni, and chocolates, it adds a delicious and joyful touch to express your love and care",
     price: "PKR 1500",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
+    reviews: {
+      rating: 4.5,
+      totalReviews: 30,
+    },
   },
   {
     id: 8,
@@ -122,60 +150,83 @@ const allProducts = [
       "/images/dairymilk3.jpeg",
     ],
     description:
-    "Dairy Milk Bouquet makes a perfect gift for any occasion, whether it's a birthday, anniversary, or special event. Filled with creamy Dairy Milk bars, it brings a sweet and thoughtful touch to show your love and affection",
+      "Dairy Milk Bouquet makes a perfect gift for any occasion, whether it's a birthday, anniversary, or special event. Filled with creamy Dairy Milk bars, it brings a sweet and thoughtful touch to show your love and affection",
     price: "PKR 2100",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
+    reviews: {
+      rating: 4.5,
+      totalReviews: 40,
+    },
   },
   {
     id: 9,
     name: "Single Blue Ribbon Rose",
     category: "Ribbon Flower Bouquet",
-    images: [
-      "/images/ribbonblue.jpeg",
-     
-    ],
+    images: ["/images/ribbonblue.jpeg"],
     description:
       "Single Blue Ribbon Rose is a graceful gift for any moment, whether it’s a birthday, anniversary, or special gesture. Its elegant blue ribbon design adds a peaceful and charming touch to convey your love and feelings",
     price: "PKR 500",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-4 Days",
+    reviews: {
+      rating: 4.5,
+      totalReviews: 5,
+    },
   },
   {
     id: 10,
     name: "Single Red Ribbon Rose",
     category: "Ribbon Flower Bouquet",
-    images: [
-      "/images/red.jpeg",
-    
-    ],
+    images: ["/images/red.jpeg"],
     description:
       "Single Red Ribbon Rose is a lovely gift for any occasion, be it a birthday, anniversary, or romantic surprise. Its vibrant red ribbon design brings a warm and heartfelt touch to express your love and emotions",
     price: "PKR 350",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "2-3 Days",
+    reviews: {
+      rating: 4.5,
+      totalReviews: 5,
+    },
   },
   {
     id: 11,
     name: "Triple Red Ribbon Roses",
     category: "Ribbon Flower Bouquet",
-    images: [
-      "/images/redbouquet2.jpeg",
-      "/images/redbouquet1.jpeg",
-      
-    ],
+    images: ["/images/redbouquet2.jpeg", "/images/redbouquet1.jpeg"],
     description:
       "Triple Red Ribbon Roses make a romantic gift for special moments, be it a birthday, anniversary, or surprise gesture. Their rich red ribbon design adds a meaningful and elegant touch to express deep love and affection",
     price: "PKR 750",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "2-4 Days",
+    reviews: {
+      rating: 4.5,
+      totalReviews: 10,
+    },
   },
   {
     id: 12,
+    name: "Crunchy Snack Bouquet",
+    category: "Snack Bouquet",
+    images: ["/images/snacksbouquet.jpg", "/images/snacksbouquet2.jpg"],
+    description:
+      "Crunchy Snack Bouquet is a fun and tasty gift for birthdays, casual surprises, or parties. Packed with a mix of chips, chocolates, and treats, it adds a playful and flavorful touch to make any moment extra special.",
+    price: "PKR 1250",
+    location: "Karachi, Pakistan",
+    delivery: "Based on location",
+    daysToDeliver: "2-4 Days",
+    reviews: {
+      rating: 4.5,
+      totalReviews: 20,
+    },
+  },
+
+  {
+    id: 13,
     name: "Deluxe Snacks Basket",
     category: "Gift Basket",
     images: [
@@ -190,27 +241,28 @@ const allProducts = [
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "2-4 Days",
+    reviews: {
+      rating: 4.9,
+      totalReviews: 15,
+    },
   },
   {
-    id: 12,
+    id: 14,
     name: "Premium Snacks Basket",
     category: "Gift Basket",
-    images: [
-      "/images/sbasket1.jpeg",
-      "/images/sbasket2.jpeg",
-    ],
+    images: ["/images/sbasket1.jpeg", "/images/sbasket2.jpeg"],
     description:
       "Premium Snacks Basket makes a cheerful gift for any occasion, be it a birthday, movie night, or casual hangout. Packed with a variety of tasty treats, it offers a delightful and thoughtful way to enjoy and share the moment",
     price: "PKR 2500",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "2-4 Days",
-  }
-  
-  
-  
-  
-  
+    reviews: {
+      rating: 4.9,
+      totalReviews: 12,
+    },
+  },
+
   // Add more products...
 ];
 
@@ -276,10 +328,9 @@ const Modal = ({ product, onClose }) => {
               </div>
             </div>
           </div>
-
           {/* Right Section (Product Details) */}
           <div className="flex-1">
-            <h2 className="text-3xl sm:text-4xl font-bold text-red-800 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-red-800 via-pink-600 to-red-800 bg-clip-text text-transparent mb-4">
               {product.name}
             </h2>
 
@@ -315,35 +366,60 @@ const Modal = ({ product, onClose }) => {
               </div>
             </div>
 
-            {/* Additional Information */}
-            <div className="mb-4">
-              
-              <div className="text-lg font-semibold mb-4">
-                <span className="text-red-600">Delivery Across Pakistan:</span>{" "}
-                Available
-              </div>
-            </div>
-
-            {/* Rating & Tags */}
+            {/* Reviews */}
             <div className="mb-4">
               <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                Rating & Tags
+                Reviews
               </h3>
               <div className="flex items-center mb-2">
-                <span className="text-yellow-500">★★★★☆</span>{" "}
-                <span className="ml-2 text-gray-600">(4.5/5 - 35 reviews)</span>
-              </div>
-              <div className="flex gap-2">
-                <span className="px-4 py-2 text-sm bg-gray-200 rounded-full text-gray-700">
-                  Popular
+                <span className="text-yellow-500">
+                  {Array.from({
+                    length: Math.floor(product.reviews.rating),
+                  }).map((_, index) => (
+                    <span key={index}>★</span>
+                  ))}
+                  {product.reviews.rating % 1 !== 0 && "☆"}
                 </span>
-                <span className="px-4 py-2 text-sm bg-gray-200 rounded-full text-gray-700">
-                  Trending
+                <span className="ml-2 text-gray-600">
+                  ({product.reviews.rating}/5 - {product.reviews.totalReviews}{" "}
+                  reviews)
                 </span>
               </div>
             </div>
 
-            {/* Call to Action Button */}
+            {/* Payment Policy */}
+            <div className="mb-4">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                Payment Policy
+              </h3>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                To confirm your order,{" "}
+                <span className="text-red-600 font-semibold">
+                  50% advance payment
+                </span>{" "}
+                is required. Once your bouquet is ready, we will share its
+                picture with you for approval. After your confirmation, the
+                remaining 50% will be collected and your order will be
+                delivered.
+              </p>
+            </div>
+
+            <div className="text-lg font-semibold mb-4">
+              <span className="text-red-600">Delivery Across Pakistan:</span>{" "}
+              Available
+            </div>
+            <div className="mt-4 font-semibold text-lg">
+              <span className="text-red-700">*</span>{" "}
+              <span className="text-gray-800">Please</span>{" "}
+              <span className="text-pink-600 font-bold">select</span> and{" "}
+              <span className="text-pink-600 font-bold">download</span> your
+              preferred <span className="text-red-700 font-bold">image</span>{" "}
+              first. Then click{" "}
+              <span className="text-pink-600 font-bold">"Buy Now"</span> to
+              place your order with this image on{" "}
+              <span className="text-green-600 font-bold">WhatsApp</span>.
+            </div>
+
             <div className="mt-6 flex justify-between items-center">
               <button className="w-full sm:w-[535px] bg-gradient-to-r from-red-800 to-pink-600 text-white px-8 py-3 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-pink-600 hover:to-red-800 transition duration-300">
                 Buy Now ➤

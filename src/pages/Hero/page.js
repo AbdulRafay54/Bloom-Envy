@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -33,24 +34,18 @@ const Hero = () => {
           special moment.
         </p>
 
-        <button className="button">
-          <span className="button_lg px-8 py-3">
-            <span className="button_sl"></span>
-            <span className="button_text text-white font-[cursive] font-semibold transition-all duration-500">
-              ---Shop Now---
+        <Link href="/allproducts">
+          <button className="button">
+            <span className="button_lg px-8 py-3">
+              <span className="button_sl"></span>
+              <span className="button_text text-white font-[cursive] font-semibold transition-all duration-500">
+                ---Shop Now---
+              </span>
             </span>
-          </span>
-        </button>
+          </button>
+        </Link>
       </div>
-     
-
-
-
-     
     </section>
-
-
-  
   );
 };
 

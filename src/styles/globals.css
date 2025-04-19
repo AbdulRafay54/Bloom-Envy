@@ -4,6 +4,10 @@
 
 body {
   background: linear-gradient(to bottom, #fce7f3, #fdf2f8);
+  scroll-behavior: smooth;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 .marquee-wrapper {
@@ -406,15 +410,15 @@ body {
 }
 
 .svgIcon {
-  fill: rgb(214, 178, 255);
+  fill: rgb(255, 61, 109);
 }
 
 .icon2 {
   width: 18px;
   height: 5px;
-  border-bottom: 2px solid rgb(182, 143, 255);
-  border-left: 2px solid rgb(182, 143, 255);
-  border-right: 2px solid rgb(182, 143, 255);
+  border-bottom: 2px solid rgb(255, 61, 109);
+  border-left: 2px solid rgb(255, 61, 109);
+  border-right: 2px solid rgb(255, 61, 109);
 }
 
 .tooltip {
@@ -452,7 +456,7 @@ body {
 }
 
 .Btn:hover {
-  background-color: rgb(150, 94, 255);
+  background-color: rgb(252, 96, 187);
   transition-duration: .3s;
 }
 
