@@ -349,13 +349,30 @@ const Products = () => {
         ))}
       </div>
       <div className="flex justify-end">
-        <Link
-          href="/allproducts"
-          className="mt-6 z-30 buttton bg-gradient-to-r from-red-800 to-pink-600 text-white border border-rose-800 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md text-lg transition-all duration-700 [text-shadow:3px_5px_2px_#be123c] hover:bg-pink-500 hover:bg-none active:opacity-75 outline-none group"
-        >
-          <span className="after:absolute after:h-1 after:w-1 after:bg-rose-800 after:left-3 after:bottom-0 after:translate-y-full after:rounded-md after:-z-20 group-hover:after:scale-[300] after:transition-all after:duration-700"></span>
-          View More...
-        </Link>
+      <Link
+  href="/allproducts"
+  className="relative cursor-pointer mt-6 z-30 font-barlow inline-flex justify-center text-lg uppercase text-white rounded-lg border-solid transition-transform duration-300 ease-in-out group outline-offset-4 focus:outline focus:outline-2 focus:outline-pink-400 focus:outline-offset-4 overflow-hidden bg-gradient-to-r from-pink-600 to-rose-600 px-6 py-3"
+>
+  <span className="relative z-20">View More...</span>
+
+  <span
+    className="absolute left-[-75%] top-0 h-full w-[50%] bg-white/20 rotate-12 z-10 blur-lg group-hover:left-[125%] transition-all duration-1000 ease-in-out"
+  ></span>
+
+  <span
+    className="w-1/2 drop-shadow-xl transition-all duration-300 block border-rose-400 absolute h-[20%] rounded-tl-lg border-l-4 border-t-4 top-0 left-0"
+  ></span>
+  <span
+    className="w-1/2 drop-shadow-xl transition-all duration-300 block border-rose-400 absolute group-hover:h-[90%] h-[60%] rounded-tr-lg border-r-4 border-t-4 top-0 right-0"
+  ></span>
+  <span
+    className="w-1/2 drop-shadow-xl transition-all duration-300 block border-rose-400 absolute h-[60%] group-hover:h-[90%] rounded-bl-lg border-l-4 border-b-4 left-0 bottom-0"
+  ></span>
+  <span
+    className="w-1/2 drop-shadow-xl transition-all duration-300 block border-rose-400 absolute h-[20%] rounded-br-lg border-r-4 border-b-4 right-0 bottom-0"
+  ></span>
+</Link>
+
       </div>
 
       {selectedProduct && (
