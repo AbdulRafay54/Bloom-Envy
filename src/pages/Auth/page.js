@@ -6,7 +6,7 @@ const Auth = ({ onLogin }) => {
   const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   useEffect(() => {
     setEmail("");
@@ -75,99 +75,114 @@ const Auth = ({ onLogin }) => {
   };
 
   return (
-<div className="min-h-screen relative flex items-center justify-center p-4">
+    <div className="min-h-screen relative flex items-center justify-center p-4">
+      {/* Background Image Layer */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: 'url("/images/section1banner.jpg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          filter: "blur(10px)",
+        }}
+      ></div>
 
-{/* Background Image Layer */}
-<div 
-  className="absolute inset-0 z-0"
-  style={{
-    backgroundImage: 'url("/images/section1banner.jpg")',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    filter: 'blur(10px)'
-  }}
-></div>
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-pink-200 via-red-200 to-pink-300 opacity-60 z-0"></div>
 
-{/* Gradient Overlay */}
-<div className="absolute inset-0 bg-gradient-to-br from-pink-200 via-red-200 to-pink-300 opacity-60 z-0"></div>
+      {/* Content */}
+      <div className="relative z-10 w-full max-w-sm bg-white rounded-3xl shadow-lg p-8">
+        <h2 className="text-3xl text-center font-bold italic text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-red-600">
+          {isLogin ? "Welcome Back!" : "Create an Account"}
+        </h2>
 
-{/* Content */}
-<div className="relative z-10 w-full max-w-sm bg-white rounded-3xl shadow-lg p-8">
-  <h2 className="text-3xl text-center font-bold italic text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-red-600">
-    {isLogin ? "Welcome Back!" : "Create an Account"}
-  </h2>
+        <div className="space-y-4 mt-7">
+          <div>
+            <label className="block text-sm font-medium text-gray-600">
+              Email
+            </label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-4 focus:ring-pink-500 outline-none transition ease-in-out duration-300"
+              placeholder="Enter your email"
+            />
+          </div>
 
-  <div className="space-y-4 mt-7">
-    <div>
-      <label className="block text-sm font-medium text-gray-600">Email</label>
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-4 focus:ring-pink-500 outline-none transition ease-in-out duration-300"
-        placeholder="Enter your email"
-      />
-    </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-600">
+              Password
+            </label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-4 focus:ring-pink-500 outline-none transition ease-in-out duration-300"
+              placeholder="Enter your password"
+            />
+          </div>
 
-    <div>
-      <label className="block text-sm font-medium text-gray-600">Password</label>
-      <input
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-4 focus:ring-pink-500 outline-none transition ease-in-out duration-300"
-        placeholder="Enter your password"
-      />
-    </div>
+          {/* Confirm Password Field - Only for Signup */}
+          {!isLogin && (
+            <div>
+              <label className="block text-sm font-medium text-gray-600">
+                Confirm Password
+              </label>
+              <input
+                type="password"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-4 focus:ring-pink-500 outline-none transition ease-in-out duration-300"
+                placeholder="Confirm your password"
+              />
+            </div>
+          )}
 
-    {/* Confirm Password Field - Only for Signup */}
-    {!isLogin && (
-      <div>
-        <label className="block text-sm font-medium text-gray-600">Confirm Password</label>
-        <input
-          type="password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-4 focus:ring-pink-500 outline-none transition ease-in-out duration-300"
-          placeholder="Confirm your password"
-        />
+          {/* Password Mismatch Message */}
+          {!isLogin &&
+            password !== confirmPassword &&
+            confirmPassword !== "" && (
+              <p className="text-sm text-red-500 mt-2">
+                Passwords do not match
+              </p>
+            )}
+
+<button
+  onClick={handleAuth}
+  className="button w-full max-w-[320px] sm:max-w-[360px] md:max-w-[400px]"
+>
+  <span className="button_lg px-10 py-4">
+    <span className="button_sl"></span>
+    <span className="button_text text-white font-[cursive] text-lg font-semibold transition-all duration-500">
+      {isLogin ? "---Login---" : "---Signup---"}
+    </span>
+  </span>
+</button>
+
+
+          <p
+            onClick={() => setIsLogin(!isLogin)}
+            className="text-sm text-center mt-4 cursor-pointer font-semibold text-blue-500 hover:text-blue-600"
+          >
+            {isLogin ? (
+              <span>
+                Don't have an account?{" "}
+                <span className="text-pink-700 hover:text-pink-600">
+                  Signup
+                </span>
+              </span>
+            ) : (
+              <span>
+                Already have an account?{" "}
+                <span className="text-pink-700 hover:text-pink-600">Login</span>
+              </span>
+            )}
+          </p>
+        </div>
       </div>
-    )}
-
-    {/* Password Mismatch Message */}
-    {!isLogin && password !== confirmPassword && confirmPassword !== "" && (
-      <p className="text-sm text-red-500 mt-2">Passwords do not match</p>
-    )}
-
-    <button
-      onClick={handleAuth}
-      className="w-full bg-gradient-to-r from-pink-500 to-red-500 text-white py-2 rounded-xl font-semibold hover:scale-105 transition ease-in-out duration-300"
-    >
-      {isLogin ? "Login" : "Signup"}
-    </button>
-
-    <p
-      onClick={() => setIsLogin(!isLogin)}
-      className="text-sm text-center mt-4 cursor-pointer font-semibold text-blue-500 hover:text-blue-600"
-    >
-      {isLogin ? (
-        <span>
-          Don't have an account?{" "}
-          <span className="text-pink-700 hover:text-pink-600">Signup</span>
-        </span>
-      ) : (
-        <span>
-          Already have an account?{" "}
-          <span className="text-pink-700 hover:text-pink-600">Login</span>
-        </span>
-      )}
-    </p>
-  </div>
-</div>
-</div>
-
-
-  )
+    </div>
+  );
 };
 
 export default Auth;

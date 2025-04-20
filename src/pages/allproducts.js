@@ -272,6 +272,17 @@ const Modal = ({ product, onClose }) => {
 
   if (!product) return null;
 
+  const handleBuyNowClick = () => {
+    const message = `Hello Bloomenvy, I Want to buy this please sent me details`;
+    const phoneNumber = "+923303049866";
+
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(whatsappLink, "_blank");
+  };
+
+
   return (
     <div className="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-md z-50 flex items-center justify-center">
       <div className="bg-white w-full max-w-7xl h-full p-8 overflow-y-auto relative rounded-lg shadow-xl">
@@ -421,7 +432,10 @@ const Modal = ({ product, onClose }) => {
             </div>
 
             <div className="mt-6 flex justify-between items-center">
-              <button className="w-full sm:w-[535px] bg-gradient-to-r from-red-800 to-pink-600 text-white px-8 py-3 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-pink-600 hover:to-red-800 transition duration-300">
+            <button
+                onClick={handleBuyNowClick}
+                className="w-full sm:w-[535px] bg-gradient-to-r from-red-800 to-pink-600 text-white px-8 py-3 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-pink-600 hover:to-red-800 transition duration-300"
+              >
                 Buy Now ➤
               </button>
             </div>

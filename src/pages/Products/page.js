@@ -288,7 +288,10 @@ const Modal = ({ product, onClose }) => {
             </div>
 
             <div className="mt-6 flex justify-between items-center">
-              <button className="w-full sm:w-[535px] bg-gradient-to-r from-red-800 to-pink-600 text-white px-8 py-3 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-pink-600 hover:to-red-800 transition duration-300">
+              <button
+                onClick={handleBuyNowClick}
+                className="w-full sm:w-[535px] bg-gradient-to-r from-red-800 to-pink-600 text-white px-8 py-3 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-pink-600 hover:to-red-800 transition duration-300"
+              >
                 Buy Now ➤
               </button>
             </div>
@@ -346,15 +349,14 @@ const Products = () => {
         ))}
       </div>
       <div className="flex justify-end">
-  <Link
-    href="/allproducts"
-    className="mt-6 z-30 buttton bg-gradient-to-r from-red-800 to-pink-600 text-white border border-rose-800 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md text-lg transition-all duration-700 [text-shadow:3px_5px_2px_#be123c] hover:bg-pink-500 hover:bg-none active:opacity-75 outline-none group"
-  >
-    <span className="after:absolute after:h-1 after:w-1 after:bg-rose-800 after:left-3 after:bottom-0 after:translate-y-full after:rounded-md after:-z-20 group-hover:after:scale-[300] after:transition-all after:duration-700"></span>
-    View More...
-  </Link>
-</div>
-
+        <Link
+          href="/allproducts"
+          className="mt-6 z-30 buttton bg-gradient-to-r from-red-800 to-pink-600 text-white border border-rose-800 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md text-lg transition-all duration-700 [text-shadow:3px_5px_2px_#be123c] hover:bg-pink-500 hover:bg-none active:opacity-75 outline-none group"
+        >
+          <span className="after:absolute after:h-1 after:w-1 after:bg-rose-800 after:left-3 after:bottom-0 after:translate-y-full after:rounded-md after:-z-20 group-hover:after:scale-[300] after:transition-all after:duration-700"></span>
+          View More...
+        </Link>
+      </div>
 
       {selectedProduct && (
         <Modal
