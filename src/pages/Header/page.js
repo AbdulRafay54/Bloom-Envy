@@ -35,8 +35,7 @@ const Navbar = () => {
       <div className="bg-black text-white overflow-hidden relative">
         <div className="marquee-wrapper">
           <span className="marquee">
-            Unwrap with 70% Off — Blossom Your Holidays with Our Enchanting
-            Flowers!
+          Exclusive 10% to 20% Discount on Your First Order — Don’t Miss Out!
           </span>
           {/* <span className="marquee">
       Unwrap with 70% Off — Blossom Your Holidays with Our Enchanting Flowers!
