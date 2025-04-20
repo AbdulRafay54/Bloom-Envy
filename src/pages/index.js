@@ -38,7 +38,6 @@ const Index = () => {
 
         setIsLoggedIn(false);
 
-        // Show a success alert after logout
         Swal.fire("Logged out!", "You have been logged out.", "success");
       }
     });
