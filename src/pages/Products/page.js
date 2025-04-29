@@ -194,7 +194,6 @@ const Modal = ({ product, onClose }) => {
             </div>
           </div>
 
-          {/* Right Section (Product Details) */}
           <div className="flex-1">
             <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-red-800 via-pink-600 to-red-800 bg-clip-text text-transparent mb-4">
               {product.name}
@@ -232,7 +231,6 @@ const Modal = ({ product, onClose }) => {
               </div>
             </div>
 
-            {/* Reviews */}
             <div className="mb-4">
               <h3 className="text-xl font-semibold text-gray-800 mb-2">
                 Reviews
@@ -253,7 +251,6 @@ const Modal = ({ product, onClose }) => {
               </div>
             </div>
 
-            {/* Payment Policy */}
             <div className="mb-4">
               <h3 className="text-xl font-semibold text-gray-800 mb-2">
                 Payment Policy
