@@ -4,6 +4,66 @@ import { useState } from "react";
 const allProducts = [
   {
     id: 1,
+    name: "Bittens Chocolate Bouquet",
+    category: "Chocolate Bouquet",
+    images: [
+      "/images/birthdaybouquet.jpeg",
+      "/images/birthdaybouquet1.jpeg",
+      "/images/birthdaybouquet.jpeg",
+    ],
+    description:
+      "Make birthdays extra special with the Sweet Bittens Chocolate Bouquet  a luxurious arrangement of premium chocolates wrapped to perfection. It's the perfect blend of elegance and sweetness to surprise your loved ones.",
+    price: "PKR 780",
+    location: "Karachi, Pakistan",
+    delivery: "Based on location",
+    daysToDeliver: "3-5 Days",
+    reviews: {
+      rating: 4.5,
+      totalReviews: 30,
+    },
+  },
+  {
+    id: 2,
+    name: "Dairy Delight Bouquet",
+    category: "Chocolate Bouquet",
+    images: [
+      "/images/dairydelight1.jpeg",
+      "/images/dairydelight.jpeg",
+      "/images/dairydelight1.jpeg",
+    ],
+    description:
+      "Make birthdays extra special with the Dairy Delight Bouquet  a luxurious arrangement of premium chocolates wrapped to perfection. It's the perfect blend of elegance and sweetness to surprise your loved ones.",
+    price: "PKR 430",
+    location: "Karachi, Pakistan",
+    delivery: "Based on location",
+    daysToDeliver: "3-5 Days",
+    reviews: {
+      rating: 4.5,
+      totalReviews: 15,
+    },
+  },
+  {
+    id: 3,
+    name: "Pink Rose Bouquet",
+    category: "Flower Bouquet",
+    images: [
+      "/images/pinkrose1.jpeg",
+      "/images/pinkrose2.jpeg",
+      "/images/pinkrose3.jpeg",
+    ],
+    description:
+      "Ribbon Red Rose makes a beautiful gift for any occasion, be it a birthday, anniversary, or special celebration. Its stunning red ribbon design adds a unique and thoughtful touch to express your love and care.",
+    price: "PKR 1200",
+    location: "Karachi, Pakistan",
+    delivery: "Based on location",
+    daysToDeliver: "3-5 Days",
+    reviews: {
+      rating: 4.5,
+      totalReviews: 25,
+    },
+  },
+  {
+    id: 4,
     name: "Giant Snack Bouquet",
     category: "Snack Bouquet",
     images: [
@@ -23,7 +83,7 @@ const allProducts = [
     },
   },
   {
-    id: 2,
+    id: 5,
     name: "You Chocolate Bouquet",
     category: "Chocolate Bouquet",
     images: ["/images/youchoc2.jpeg", "/images/youchoc1.jpeg"],
@@ -39,7 +99,7 @@ const allProducts = [
     },
   },
   {
-    id: 3,
+    id: 6,
     name: "Mini Ribbon Rose Bouquet",
     category: "Ribbon Flower",
     images: [
@@ -59,7 +119,7 @@ const allProducts = [
     },
   },
   {
-    id: 4,
+    id: 7,
     name: "Glam Choco Bouquet",
     category: "Jewellery and Chocolate Bouquet",
     images: [
@@ -80,7 +140,7 @@ const allProducts = [
     },
   },
   {
-    id: 5,
+    id: 8,
     name: "Mini Chocolate Bouquet",
     category: "Chocolate Bouquet",
     images: [
@@ -100,7 +160,7 @@ const allProducts = [
     },
   },
   {
-    id: 6,
+    id: 9,
     name: "Red Ribbon Rose Bouquet",
     category: "Ribbon Flower Bouquet",
     images: [
@@ -121,7 +181,7 @@ const allProducts = [
     },
   },
   {
-    id: 7,
+    id: 10,
     name: "Chocolate Delight Bouquett",
     category: "Chocolate Bouquet",
     images: [
@@ -141,7 +201,7 @@ const allProducts = [
     },
   },
   {
-    id: 8,
+    id: 11,
     name: "DairyMilk Chocolate Bouquet",
     category: "Chocolate Bouquet",
     images: [
@@ -161,7 +221,7 @@ const allProducts = [
     },
   },
   {
-    id: 9,
+    id: 12,
     name: "Single Blue Ribbon Rose",
     category: "Ribbon Flower Bouquet",
     images: ["/images/ribbonblue.jpeg"],
@@ -177,7 +237,7 @@ const allProducts = [
     },
   },
   {
-    id: 10,
+    id: 13,
     name: "Single Red Ribbon Rose",
     category: "Ribbon Flower Bouquet",
     images: ["/images/red.jpeg"],
@@ -193,7 +253,7 @@ const allProducts = [
     },
   },
   {
-    id: 11,
+    id: 14,
     name: "Triple Red Ribbon Roses",
     category: "Ribbon Flower Bouquet",
     images: ["/images/redbouquet2.jpeg", "/images/redbouquet1.jpeg"],
@@ -209,7 +269,7 @@ const allProducts = [
     },
   },
   {
-    id: 12,
+    id: 15,
     name: "Crunchy Snack Bouquet",
     category: "Snack Bouquet",
     images: ["/images/snacksbouquet.jpg", "/images/snacksbouquet2.jpg"],
@@ -226,7 +286,7 @@ const allProducts = [
   },
 
   {
-    id: 13,
+    id: 16,
     name: "Deluxe Snacks Basket",
     category: "Gift Basket",
     images: [
@@ -247,7 +307,7 @@ const allProducts = [
     },
   },
   {
-    id: 14,
+    id: 17,
     name: "Premium Snacks Basket",
     category: "Gift Basket",
     images: ["/images/sbasket1.jpeg", "/images/sbasket2.jpeg"],
@@ -263,7 +323,7 @@ const allProducts = [
     },
   },
 
-  // Add more products...
+ 
 ];
 
 const Modal = ({ product, onClose }) => {

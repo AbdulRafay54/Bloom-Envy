@@ -4,58 +4,62 @@ import { useState } from "react";
 const products = [
   {
     id: 1,
-    name: "Giant Snack Bouquet",
-    category: "Snack Bouquet",
+    name: "Bittens Chocolate Bouquet",
+    category: "Chocolate Bouquet",
     images: [
-      "/images/snack3.jpeg",
-      "/images/snack2.jpeg",
-      "/images/snack1.jpeg",
+      "/images/birthdaybouquet.jpeg",
+      "/images/birthdaybouquet1.jpeg",
+      "/images/birthdaybouquet.jpeg",
     ],
     description:
-      "Giant Snack Bouquet is the perfect gift for any occasion, whether it's a birthday, anniversary, or special event. Filled with a variety of delicious snacks, it's a fun and thoughtful way to show someone you care.",
-    price: "PKR 1500",
+      "Make birthdays extra special with the Sweet Bittens Chocolate Bouquet  a luxurious arrangement of premium chocolates wrapped to perfection. It's the perfect blend of elegance and sweetness to surprise your loved ones.",
+    price: "PKR 780",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
     reviews: {
       rating: 4.5,
-      totalReviews: 45,
+      totalReviews: 30,
     },
   },
   {
     id: 2,
-    name: "You Chocolate Bouquet",
+    name: "Dairy Delight Bouquet",
     category: "Chocolate Bouquet",
-    images: ["/images/youchoc2.jpeg", "/images/youchoc1.jpeg"],
+    images: [
+      "/images/dairydelight1.jpeg",
+      "/images/dairydelight.jpeg",
+      "/images/dairydelight1.jpeg",
+    ],
     description:
-      "You Chocolate Bouquet is the perfect gift for any occasion, whether it's a birthday, anniversary, or any special event. Made with delicious chocolate, it's a sweet and thoughtful way to show someone you care.",
-    price: "PKR 1500",
+      "Make birthdays extra special with the Dairy Delight Bouquet  a luxurious arrangement of premium chocolates wrapped to perfection. It's the perfect blend of elegance and sweetness to surprise your loved ones.",
+    price: "PKR 430",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
     reviews: {
       rating: 4.5,
-      totalReviews: 37,
+      totalReviews: 15,
     },
   },
   {
     id: 3,
-    name: "Mini Ribbon Rose Bouquet",
-    category: "Ribbon Flower",
+    name: "Pink Rose Bouquet",
+    category: "Flower Bouquet",
     images: [
-      "/images/minirose1.jpeg",
-      "/images/minirose2.jpeg",
-      "/images/minirose1.jpeg",
+      "/images/pinkrose1.jpeg",
+      "/images/pinkrose2.jpeg",
+      "/images/pinkrose3.jpeg",
     ],
     description:
-      "Mini Rose Bouquet is an ideal gift for any occasion, be it a birthday, anniversary, or special celebration. Its charming roses make it a lovely and thoughtful way to express your care.",
-    price: "PKR 300",
+      "Ribbon Red Rose makes a beautiful gift for any occasion, be it a birthday, anniversary, or special celebration. Its stunning red ribbon design adds a unique and thoughtful touch to express your love and care.",
+    price: "PKR 1200",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
     reviews: {
       rating: 4.5,
-      totalReviews: 37,
+      totalReviews: 25,
     },
   },
   {
@@ -346,30 +350,19 @@ const Products = () => {
         ))}
       </div>
       <div className="flex justify-end">
-      <Link
-  href="/allproducts"
-  className="relative cursor-pointer mt-6 z-30 font-barlow inline-flex justify-center text-lg uppercase text-white rounded-lg border-solid transition-transform duration-300 ease-in-out group outline-offset-4 focus:outline focus:outline-2 focus:outline-pink-400 focus:outline-offset-4 overflow-hidden bg-gradient-to-r from-pink-600 to-rose-600 px-6 py-3"
->
-  <span className="relative z-20">View More...</span>
+        <Link
+          href="/allproducts"
+          className="relative cursor-pointer mt-6 z-30 font-barlow inline-flex justify-center text-lg uppercase text-white rounded-lg border-solid transition-transform duration-300 ease-in-out group outline-offset-4 focus:outline focus:outline-2 focus:outline-pink-400 focus:outline-offset-4 overflow-hidden bg-gradient-to-r from-pink-600 to-rose-600 px-6 py-3"
+        >
+          <span className="relative z-20">View More...</span>
 
-  <span
-    className="absolute left-[-75%] top-0 h-full w-[50%] bg-white/20 rotate-12 z-10 blur-lg group-hover:left-[125%] transition-all duration-1000 ease-in-out"
-  ></span>
+          <span className="absolute left-[-75%] top-0 h-full w-[50%] bg-white/20 rotate-12 z-10 blur-lg group-hover:left-[125%] transition-all duration-1000 ease-in-out"></span>
 
-  <span
-    className="w-1/2 drop-shadow-xl transition-all duration-300 block border-rose-400 absolute h-[20%] rounded-tl-lg border-l-4 border-t-4 top-0 left-0"
-  ></span>
-  <span
-    className="w-1/2 drop-shadow-xl transition-all duration-300 block border-rose-400 absolute group-hover:h-[90%] h-[60%] rounded-tr-lg border-r-4 border-t-4 top-0 right-0"
-  ></span>
-  <span
-    className="w-1/2 drop-shadow-xl transition-all duration-300 block border-rose-400 absolute h-[60%] group-hover:h-[90%] rounded-bl-lg border-l-4 border-b-4 left-0 bottom-0"
-  ></span>
-  <span
-    className="w-1/2 drop-shadow-xl transition-all duration-300 block border-rose-400 absolute h-[20%] rounded-br-lg border-r-4 border-b-4 right-0 bottom-0"
-  ></span>
-</Link>
-
+          <span className="w-1/2 drop-shadow-xl transition-all duration-300 block border-rose-400 absolute h-[20%] rounded-tl-lg border-l-4 border-t-4 top-0 left-0"></span>
+          <span className="w-1/2 drop-shadow-xl transition-all duration-300 block border-rose-400 absolute group-hover:h-[90%] h-[60%] rounded-tr-lg border-r-4 border-t-4 top-0 right-0"></span>
+          <span className="w-1/2 drop-shadow-xl transition-all duration-300 block border-rose-400 absolute h-[60%] group-hover:h-[90%] rounded-bl-lg border-l-4 border-b-4 left-0 bottom-0"></span>
+          <span className="w-1/2 drop-shadow-xl transition-all duration-300 block border-rose-400 absolute h-[20%] rounded-br-lg border-r-4 border-b-4 right-0 bottom-0"></span>
+        </Link>
       </div>
 
       {selectedProduct && (
