@@ -3,6 +3,29 @@ import { useState } from "react";
 
 const products = [
   {
+  id: 2,
+  name: "Elegant Cash Surprise Bouquet",
+  category: "Cash Bouquet",
+  images: [
+    "/images/cash (4).jpg",
+    "/images/cash (2).jpg",
+    "/images/cash (3).jpg",
+    "/images/cash (1).jpg",
+
+  ],
+  description:
+    "Surprise your loved ones with the Elegant Cash Surprise Bouquet — a graceful fusion of floral charm and PKR 5000 in beautifully folded notes. Perfect for birthdays, weddings, or any special celebration where elegance meets generosity.",
+  price: "PKR 6800",
+  location: "Karachi, Pakistan",
+  delivery: "Based on location",
+  daysToDeliver: "5-7 Days",
+  reviews: {
+    rating: 5,
+    totalReviews: 6,
+  },
+},
+
+  {
     id: 1,
     name: "Bittens Chocolate Bouquet",
     category: "Chocolate Bouquet",
@@ -311,11 +334,11 @@ const Products = () => {
       <div className="text-center about mb-12">
         <h1 className="text-4xl name sm:text-5xl font-semibold tracking-wide group hover:text-pink-600 transition-colors duration-300 font-serif">
           <span className="text-red-800 group-hover:text-pink-600 transition-colors duration-300">
-            Our
+             Trending
           </span>
           <span className="text-pink-600 group-hover:text-red-800 transition-colors duration-300">
             {" "}
-            Products
+            Bouquets
           </span>
         </h1>
       </div>
