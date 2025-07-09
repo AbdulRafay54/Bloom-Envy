@@ -3,6 +3,28 @@ import { useState } from "react";
 
 const allProducts = [
   {
+  id: 2,
+  name: "Elegant Cash Surprise Bouquet",
+  category: "Cash Bouquet",
+  images: [
+    "/images/cash (4).jpg",
+    "/images/cash (2).jpg",
+    "/images/cash (3).jpg",
+    "/images/cash (1).jpg",
+
+  ],
+  description:
+    "Surprise your loved ones with the Elegant Cash Surprise Bouquet — a graceful fusion of floral charm and PKR 5000 in beautifully folded notes. Perfect for birthdays, weddings, or any special celebration where elegance meets generosity.",
+  price: "PKR 6800",
+  location: "Karachi, Pakistan",
+  delivery: "Based on location",
+  daysToDeliver: "5-7 Days",
+  reviews: {
+    rating: 5,
+    totalReviews: 6,
+  },
+},
+  {
     id: 1,
     name: "Bittens Chocolate Bouquet",
     category: "Chocolate Bouquet",
