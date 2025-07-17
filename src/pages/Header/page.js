@@ -102,6 +102,12 @@ const Navbar = () => {
           >
             Contact
           </Link>
+          <Link
+            href="./Review/page"
+            className="nav-link hover:text-red-800 hover:text-pink-600 transition-colors duration-300 font-[cursive]"
+          >
+           Reviews
+          </Link>
         </div>
       </div>
 
@@ -133,6 +139,13 @@ const Navbar = () => {
           onClick={toggleMenu}
         >
           Contact
+        </Link>
+        <Link
+          href="./Review/page"
+          className="nav-link block py-2 text-center font-[cursive]"
+          onClick={toggleMenu}
+        >
+         Reviews
         </Link>
       </div>
     </nav>
