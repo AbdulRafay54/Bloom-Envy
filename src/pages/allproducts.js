@@ -3,6 +3,28 @@ import { useState } from "react";
 
 const allProducts = [
   {
+  id: 1,
+  name: "Blossom Ribbon Flower Bouquet",
+  category: "Cash Bouquet",
+  images: [
+    "/images/ribbon1.jpeg",
+    "/images/ribbon2.jpeg",
+    "/images/ribbon3.jpeg",
+    "/images/ribbon4.jpeg",
+
+  ],
+  description:
+    "Celebrate special moments with our Blossom Ribbon Flower Bouquet — a handcrafted arrangement made with delicate ribbon flowers that never wilt. A perfect token of love, elegance, and creativity, ideal for birthdays, anniversaries, or as a lasting decorative gift.",
+  price: "PKR 2550",
+  location: "Karachi, Pakistan",
+  delivery: "Based on location",
+  daysToDeliver: "5-7 Days",
+  reviews: {
+    rating: 5,
+    totalReviews: 4,
+  },
+},
+  {
   id: 2,
   name: "Elegant Cash Surprise Bouquet",
   category: "Cash Bouquet",
@@ -25,7 +47,7 @@ const allProducts = [
   },
 },
   {
-    id: 1,
+    id: 3,
     name: "Bittens Chocolate Bouquet",
     category: "Chocolate Bouquet",
     images: [
@@ -35,7 +57,7 @@ const allProducts = [
     ],
     description:
       "Make birthdays extra special with the Sweet Bittens Chocolate Bouquet  a luxurious arrangement of premium chocolates wrapped to perfection. It's the perfect blend of elegance and sweetness to surprise your loved ones.",
-    price: "PKR 780",
+    price: "PKR 790",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
@@ -45,7 +67,7 @@ const allProducts = [
     },
   },
   {
-    id: 2,
+    id: 4,
     name: "Dairy Delight Bouquet",
     category: "Chocolate Bouquet",
     images: [
@@ -55,7 +77,7 @@ const allProducts = [
     ],
     description:
       "Make birthdays extra special with the Dairy Delight Bouquet  a luxurious arrangement of premium chocolates wrapped to perfection. It's the perfect blend of elegance and sweetness to surprise your loved ones.",
-    price: "PKR 430",
+    price: "PKR 450",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
@@ -65,7 +87,7 @@ const allProducts = [
     },
   },
   {
-    id: 3,
+    id: 5,
     name: "Pink Rose Bouquet",
     category: "Flower Bouquet",
     images: [
@@ -75,7 +97,7 @@ const allProducts = [
     ],
     description:
       "Ribbon Red Rose makes a beautiful gift for any occasion, be it a birthday, anniversary, or special celebration. Its stunning red ribbon design adds a unique and thoughtful touch to express your love and care.",
-    price: "PKR 1200",
+    price: "PKR 1400",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
@@ -85,7 +107,7 @@ const allProducts = [
     },
   },
   {
-    id: 4,
+    id: 6,
     name: "Giant Snack Bouquet",
     category: "Snack Bouquet",
     images: [
@@ -105,7 +127,7 @@ const allProducts = [
     },
   },
   {
-    id: 5,
+    id: 7,
     name: "You Chocolate Bouquet",
     category: "Chocolate Bouquet",
     images: ["/images/youchoc2.jpeg", "/images/youchoc1.jpeg"],
@@ -121,7 +143,7 @@ const allProducts = [
     },
   },
   {
-    id: 6,
+    id: 8,
     name: "Mini Ribbon Rose Bouquet",
     category: "Ribbon Flower",
     images: [
@@ -141,7 +163,7 @@ const allProducts = [
     },
   },
   {
-    id: 7,
+    id: 9,
     name: "Glam Choco Bouquet",
     category: "Jewellery and Chocolate Bouquet",
     images: [
@@ -162,7 +184,7 @@ const allProducts = [
     },
   },
   {
-    id: 8,
+    id: 10,
     name: "Mini Chocolate Bouquet",
     category: "Chocolate Bouquet",
     images: [
@@ -182,7 +204,7 @@ const allProducts = [
     },
   },
   {
-    id: 9,
+    id: 11,
     name: "Red Ribbon Rose Bouquet",
     category: "Ribbon Flower Bouquet",
     images: [
@@ -203,7 +225,7 @@ const allProducts = [
     },
   },
   {
-    id: 10,
+    id: 12,
     name: "Chocolate Delight Bouquett",
     category: "Chocolate Bouquet",
     images: [
@@ -223,7 +245,7 @@ const allProducts = [
     },
   },
   {
-    id: 11,
+    id: 13,
     name: "DairyMilk Chocolate Bouquet",
     category: "Chocolate Bouquet",
     images: [
@@ -243,7 +265,7 @@ const allProducts = [
     },
   },
   {
-    id: 12,
+    id: 14,
     name: "Single Blue Ribbon Rose",
     category: "Ribbon Flower Bouquet",
     images: ["/images/ribbonblue.jpeg"],
@@ -259,7 +281,7 @@ const allProducts = [
     },
   },
   {
-    id: 13,
+    id: 15,
     name: "Single Red Ribbon Rose",
     category: "Ribbon Flower Bouquet",
     images: ["/images/red.jpeg"],
@@ -275,7 +297,7 @@ const allProducts = [
     },
   },
   {
-    id: 14,
+    id: 16,
     name: "Triple Red Ribbon Roses",
     category: "Ribbon Flower Bouquet",
     images: ["/images/redbouquet2.jpeg", "/images/redbouquet1.jpeg"],
@@ -291,7 +313,7 @@ const allProducts = [
     },
   },
   {
-    id: 15,
+    id: 17,
     name: "Crunchy Snack Bouquet",
     category: "Snack Bouquet",
     images: ["/images/snacksbouquet.jpg", "/images/snacksbouquet2.jpg"],
@@ -308,7 +330,7 @@ const allProducts = [
   },
 
   {
-    id: 16,
+    id: 18,
     name: "Deluxe Snacks Basket",
     category: "Gift Basket",
     images: [
@@ -318,8 +340,8 @@ const allProducts = [
       "/images/basket4.jpeg",
     ],
     description:
-      "Deluxe Snacks Basket is a fun and tasty gift for any event, whether it’s a birthday, get-together, or celebration. Filled with assorted snacks and goodies, it adds a joyful and flavorful touch to share happiness and care",
-    price: "PKR 3000",
+      "Deluxe Snacks Basket is a fun and tasty gift for any event, whether it's a birthday, get-together, or celebration. Filled with assorted snacks and goodies, it adds a joyful and flavorful touch to share happiness and care",
+    price: "PKR 3200",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "2-4 Days",
@@ -329,13 +351,13 @@ const allProducts = [
     },
   },
   {
-    id: 17,
+    id: 19,
     name: "Premium Snacks Basket",
     category: "Gift Basket",
     images: ["/images/sbasket1.jpeg", "/images/sbasket2.jpeg"],
     description:
       "Premium Snacks Basket makes a cheerful gift for any occasion, be it a birthday, movie night, or casual hangout. Packed with a variety of tasty treats, it offers a delightful and thoughtful way to enjoy and share the moment",
-    price: "PKR 2500",
+    price: "PKR 2700",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "2-4 Days",

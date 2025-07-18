@@ -1,30 +1,49 @@
 import { FaStar } from "react-icons/fa";
 
 const reviews = [
+  
   {
     id: 1,
-    name: "Sufyan",
+    name: "Maviya Sheikh",
     rating: 5,
     review:
-      "It arrived on time and looked so pretty! Totally loved it.",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlRpyM8klDYwnhznIs7IodY1a6-WiCmmGC4w&s",
-  },
-  {
-    id: 2,
-    name: "Maviya Sheikh",
-    rating: 4.8,
-    review:
-      "Thanks for making a beautiful bouquet. Apny bht kam time ma itna pyara bouquet bnaya literally bht pyara lg rha h thanks again",
+      "Thanks for making a beautiful bouquet. Apny bht kam time ma itna pyara bouquet bnaya literally bht pyara lg rha hai thanks again",
     image:
       "https://images.unsplash.com/photo-1603415526960-f8f1f5ef779b?auto=format&fit=crop&w=100&q=80",
   },
   {
-    id: 3,
-    name: "Haider",
+    id: 2,
+    name: "Abdul Basit",
     rating: 5,
     review:
-      "Handmade touch was beautiful! Perfect for gifting — my go-to store now 💐",
+      "Thankyou so much for this amazing stunning bouquet i just loved it ❤️",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlRpyM8klDYwnhznIs7IodY1a6-WiCmmGC4w&s",
+  },
+  {
+    id: 3,
+    name: "Muhammad Huzaifa",
+    rating: 5,
+    review:
+      "Bouquet mil gaya, bohat hi cute aur pyara tha 💐🍫Thank you Bloom Envy hamesha ki tarah perfect! 💕",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlRpyM8klDYwnhznIs7IodY1a6-WiCmmGC4w&s",
+  },
+  {
+    id: 4,
+    name: "",
+    rating: 5,
+    review:
+      "Bouquet mil gaya, bohat hi cute aur pyara tha 💐🍫Thank you Bloom Envy hamesha ki tarah perfect! 💕",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlRpyM8klDYwnhznIs7IodY1a6-WiCmmGC4w&s",
+  },
+  {
+    id: 5,
+    name: "Sufyan",
+    rating: 5,
+    review:
+      "It arrived on time and looked so pretty! Totally loved it.",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlRpyM8klDYwnhznIs7IodY1a6-WiCmmGC4w&s",
   },

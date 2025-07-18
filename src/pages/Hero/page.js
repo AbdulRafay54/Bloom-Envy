@@ -4,7 +4,7 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <section className="relative min-h-screen w-full flex items-center justify-center mt-10 text-center px-4">
-      {/* Background Image */}
+      
       <div className="absolute inset-0 w-full h-full">
         <Image
           src="/images/section1banner.jpg"
@@ -17,7 +17,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-white/40"></div>
       </div>
 
-      {/* Text Content */}
+     
       <div className="relative z-10 flex flex-col items-center justify-center max-w-3xl mx-auto">
         <h1 className="text-4xl  sm:text-5xl lg:text-[58px] font-semibold name tracking-wide mb-2">
           <span className="text-red-800">Bloom</span>{" "}

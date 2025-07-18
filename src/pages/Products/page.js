@@ -3,6 +3,28 @@ import { useState } from "react";
 
 const products = [
   {
+  id: 1,
+  name: "Blossom Ribbon Flower Bouquet",
+  category: "Ribbon Flower Bouquet",
+  images: [
+    "/images/ribbon1.jpeg",
+    "/images/ribbon2.jpeg",
+    "/images/ribbon3.jpeg",
+    "/images/ribbon4.jpeg",
+
+  ],
+  description:
+    "Celebrate special moments with our Blossom Ribbon Flower Bouquet — a handcrafted arrangement made with delicate ribbon flowers that never wilt. A perfect token of love, elegance, and creativity, ideal for birthdays, anniversaries, or as a lasting decorative gift.",
+  price: "PKR 2550",
+  location: "Karachi, Pakistan",
+  delivery: "Based on location",
+  daysToDeliver: "5-7 Days",
+  reviews: {
+    rating: 5,
+    totalReviews: 4,
+  },
+},
+  {
   id: 2,
   name: "Elegant Cash Surprise Bouquet",
   category: "Cash Bouquet",
@@ -26,7 +48,7 @@ const products = [
 },
 
   {
-    id: 1,
+    id: 3,
     name: "Bittens Chocolate Bouquet",
     category: "Chocolate Bouquet",
     images: [
@@ -36,7 +58,7 @@ const products = [
     ],
     description:
       "Make birthdays extra special with the Sweet Bittens Chocolate Bouquet  a luxurious arrangement of premium chocolates wrapped to perfection. It's the perfect blend of elegance and sweetness to surprise your loved ones.",
-    price: "PKR 780",
+    price: "PKR 790",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
@@ -46,7 +68,7 @@ const products = [
     },
   },
   {
-    id: 2,
+    id: 4,
     name: "Dairy Delight Bouquet",
     category: "Chocolate Bouquet",
     images: [
@@ -56,7 +78,7 @@ const products = [
     ],
     description:
       "Make birthdays extra special with the Dairy Delight Bouquet  a luxurious arrangement of premium chocolates wrapped to perfection. It's the perfect blend of elegance and sweetness to surprise your loved ones.",
-    price: "PKR 430",
+    price: "PKR 450",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
@@ -66,7 +88,7 @@ const products = [
     },
   },
   {
-    id: 3,
+    id: 5,
     name: "Pink Rose Bouquet",
     category: "Flower Bouquet",
     images: [
@@ -76,7 +98,7 @@ const products = [
     ],
     description:
       "Ribbon Red Rose makes a beautiful gift for any occasion, be it a birthday, anniversary, or special celebration. Its stunning red ribbon design adds a unique and thoughtful touch to express your love and care.",
-    price: "PKR 1200",
+    price: "PKR 1400",
     location: "Karachi, Pakistan",
     delivery: "Based on location",
     daysToDeliver: "3-5 Days",
@@ -86,7 +108,7 @@ const products = [
     },
   },
   {
-    id: 4,
+    id: 6,
     name: "Glam Choco Bouquet",
     category: "Jewellery and Chocolate Bouquet",
     images: [
@@ -107,7 +129,7 @@ const products = [
     },
   },
   {
-    id: 5,
+    id: 7,
     name: "Mini Chocolate Bouquet",
     category: "Chocolate Bouquet",
     images: [
@@ -127,7 +149,7 @@ const products = [
     },
   },
   {
-    id: 6,
+    id: 8,
     name: "Red Ribbon Rose Bouquet",
     category: "Ribbon Flower Bouquet",
     images: [
