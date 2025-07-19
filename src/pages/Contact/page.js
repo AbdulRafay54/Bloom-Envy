@@ -1,18 +1,16 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import Swal from "sweetalert2"; // SweetAlert2 ko import karen
+import Swal from "sweetalert2"; 
 
 const Contact = () => {
-  // State variables for form inputs
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  // Form submit handler
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Check if any field is empty
     if (!name || !email || !message) {
       Swal.fire({
         icon: "warning",
@@ -22,14 +20,14 @@ const Contact = () => {
       return;
     }
 
-    // If form is filled, show SweetAlert message
+   
     Swal.fire({
       icon: "info",
       title: "This feature will be coming soon",
       confirmButtonText: "Got it!",
     });
 
-    // Reset form fields
+    
     setName("");
     setEmail("");
     setMessage("");
@@ -51,9 +49,9 @@ const Contact = () => {
           </h1>
         </div>
 
-        {/* Content */}
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          {/* Form Section */}
+       
           <div className="text-center md:text-left" data-aos="fade-left">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 font-[cursive]">
               Get In Touch
@@ -111,7 +109,6 @@ const Contact = () => {
             </form>
           </div>
 
-          {/* Image Section */}
           <div className="relative flex justify-center" data-aos="fade-right">
             <Image
               src="/images/flower.jpeg"
@@ -120,7 +117,7 @@ const Contact = () => {
               height={200}
               className="rounded-2xl shadow-lg max-w-full h-[450px] opacity-60"
             />
-            {/* Text Badge */}
+         
             <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-sm sm:text-md font-semibold px-4 sm:px-6 py-2 font-[cursive]">
               <button className="btn ">
                 <div className="wrapper">
