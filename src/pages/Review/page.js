@@ -14,15 +14,18 @@ const Page = () => {
       const text = await res.text();
 
       const rows = text.trim().split("\n");
-      const data = rows.slice(1).map((row) => {
-        const values = row.split(",");
-        return {
-          name: values[1] || "Unknown", // Name
-          email: values[2] || "", // Email
-          message: values[3] || "", // Review Message
-          rating: parseInt(values[4]) || 5, // Rating
-        };
-      });
+      const data = rows
+        .slice(1)
+        .map((row) => {
+          const values = row.split(",");
+          return {
+            name: values[1] || "Unknown",
+            email: values[2] || "",
+            message: values[3] || "",
+            rating: parseInt(values[4]) || 5,
+          };
+        })
+        .filter((review) => review.message.trim() !== ""); // ⬅️ only non-empty reviews
 
       setReviews(data.reverse()); // latest first
     };
@@ -32,30 +35,42 @@ const Page = () => {
 
   return (
     <section className="bg-gradient-to-b from-pink-50 to-purple-50 py-20 px-6">
-      <h2 className="text-4xl md:text-5xl font-extrabold text-center text-transparent bg-gradient-to-r from-pink-700 via-pink-600 to-[#4b1248] bg-clip-text mb-6 tracking-tight relative inline-block after:content-[''] after:absolute after:w-28 after:h-[3px] after:bg-pink-700 after:left-1/2 after:-translate-x-1/2 after:-bottom-3 after:rounded-full">
+      <h2
+        className="text-4xl md:text-5xl text-center text-transparent bg-gradient-to-r from-pink-700 via-pink-600 to-[#4b1248] bg-clip-text mb-6 tracking-wide relative inline-block 
+    after:content-[''] after:absolute after:w-28 after:h-[3px] after:bg-pink-700 after:left-1/2 after:-translate-x-1/2 after:-bottom-3 after:rounded-full 
+    before:content-[''] before:absolute before:w-28 before:h-[3px] before:bg-pink-300 before:left-1/2 before:-translate-x-1/2 before:-bottom-6 before:rounded-full"
+        style={{ fontFamily: "'Lobster', cursive" }}
+      >
         Customer Love 💕
       </h2>
 
-      <p className="text-center text-gray-500 mb-12 text-sm">
-        Hear what our happy customers say about Bloom Envy
+      <p
+        className="text-center text-[#555] mb-12 text-xl sm:text-2xl tracking-wide"
+        style={{ fontFamily: "'Pacifico', cursive" }}
+      >
+        Hear what our happy customers say about{" "}
+        <span className="font-bold text-[#333]">Bloom Envy</span>
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
         {reviews.map((review, index) => {
           const nameParts = review.name.trim().split(" ");
+          const ignoreList = ["muhammad", "mohammad", "mohd", "syed", "md"];
+
           const initial =
-            nameParts[0].toLowerCase() === "muhammad" && nameParts.length > 1
+            ignoreList.includes(nameParts[0].toLowerCase()) &&
+            nameParts.length > 1
               ? nameParts[1][0].toUpperCase()
               : nameParts[0][0].toUpperCase();
 
           const colors = [
-            "bg-sky-600", 
+            "bg-sky-600",
             "bg-rose-400",
-            "bg-fuchsia-400", 
+            "bg-fuchsia-400",
             "bg-amber-300",
             "bg-violet-300",
-            "bg-emerald-300", 
-            "bg-teal-300", 
+            "bg-emerald-300",
+            "bg-teal-300",
 
             "bg-lime-300",
           ];
@@ -97,8 +112,8 @@ const Page = () => {
                 </div>
               </div>
 
-              <p className="text-sm text-gray-700 leading-relaxed italic border-l-4 pl-4 border-pink-300">
-                “{review.message}”
+              <p className="text-sm text-gray-700 leading-relaxed border-l-4 pl-4 border-pink-300 font-medium tracking-wide ">
+                {review.message.replace(/^"/, "")}
               </p>
             </div>
           );

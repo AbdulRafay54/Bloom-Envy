@@ -19,7 +19,9 @@ const Hero = () => {
 
      
       <div className="relative z-10 flex flex-col items-center justify-center max-w-3xl mx-auto">
-        <h1 className="text-4xl  sm:text-5xl lg:text-[58px] font-semibold name tracking-wide mb-2">
+        <h1 className="text-4xl  sm:text-5xl lg:text-[58px] font-semibold name tracking-wide mb-2"
+        
+        >
           <span className="text-red-800">Bloom</span>{" "}
           <span className="ml-2 text-pink-600">Envy</span>
         </h1>
