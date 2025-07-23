@@ -3,49 +3,47 @@ import { useState } from "react";
 
 const allProducts = [
   {
-  id: 1,
-  name: "Blossom Ribbon Flower Bouquet",
-  category: "Cash Bouquet",
-  images: [
-    "/images/ribbon1.jpeg",
-    "/images/ribbon2.jpeg",
-    "/images/ribbon3.jpeg",
-    "/images/ribbon4.jpeg",
-
-  ],
-  description:
-    "Celebrate special moments with our Blossom Ribbon Flower Bouquet — a handcrafted arrangement made with delicate ribbon flowers that never wilt. A perfect token of love, elegance, and creativity, ideal for birthdays, anniversaries, or as a lasting decorative gift.",
-  price: "PKR 2550",
-  location: "Karachi, Pakistan",
-  delivery: "Based on location",
-  daysToDeliver: "5-7 Days",
-  reviews: {
-    rating: 5,
-    totalReviews: 4,
+    id: 1,
+    name: "Blossom Ribbon Flower Bouquet",
+    category: "Cash Bouquet",
+    images: [
+      "/images/ribbon1.jpeg",
+      "/images/ribbon2.jpeg",
+      "/images/ribbon3.jpeg",
+      "/images/ribbon4.jpeg",
+    ],
+    description:
+      "Celebrate special moments with our Blossom Ribbon Flower Bouquet — a handcrafted arrangement made with delicate ribbon flowers that never wilt. A perfect token of love, elegance, and creativity, ideal for birthdays, anniversaries, or as a lasting decorative gift.",
+    price: "PKR 2550",
+    location: "Karachi, Pakistan",
+    delivery: "Based on location",
+    daysToDeliver: "5-7 Days",
+    reviews: {
+      rating: 5,
+      totalReviews: 4,
+    },
   },
-},
   {
-  id: 2,
-  name: "Elegant Cash Surprise Bouquet",
-  category: "Cash Bouquet",
-  images: [
-    "/images/cash (4).jpg",
-    "/images/cash (2).jpg",
-    "/images/cash (3).jpg",
-    "/images/cash (1).jpg",
-
-  ],
-  description:
-    "Surprise your loved ones with the Elegant Cash Surprise Bouquet — a graceful fusion of floral charm and PKR 5000 in beautifully folded notes. Perfect for birthdays, weddings, or any special celebration where elegance meets generosity.",
-  price: "PKR 6800",
-  location: "Karachi, Pakistan",
-  delivery: "Based on location",
-  daysToDeliver: "5-7 Days",
-  reviews: {
-    rating: 5,
-    totalReviews: 6,
+    id: 2,
+    name: "Elegant Cash Surprise Bouquet",
+    category: "Cash Bouquet",
+    images: [
+      "/images/cash (4).jpg",
+      "/images/cash (2).jpg",
+      "/images/cash (3).jpg",
+      "/images/cash (1).jpg",
+    ],
+    description:
+      "Surprise your loved ones with the Elegant Cash Surprise Bouquet — a graceful fusion of floral charm and PKR 5000 in beautifully folded notes. Perfect for birthdays, weddings, or any special celebration where elegance meets generosity.",
+    price: "PKR 6800",
+    location: "Karachi, Pakistan",
+    delivery: "Based on location",
+    daysToDeliver: "5-7 Days",
+    reviews: {
+      rating: 5,
+      totalReviews: 6,
+    },
   },
-},
   {
     id: 3,
     name: "Bittens Chocolate Bouquet",
@@ -366,8 +364,6 @@ const allProducts = [
       totalReviews: 12,
     },
   },
-
- 
 ];
 
 const Modal = ({ product, onClose }) => {
@@ -385,7 +381,6 @@ const Modal = ({ product, onClose }) => {
     )}`;
     window.open(whatsappLink, "_blank");
   };
-
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-md z-50 flex items-center justify-center">
@@ -445,7 +440,9 @@ const Modal = ({ product, onClose }) => {
           </div>
           {/* Right Section (Product Details) */}
           <div className="flex-1">
-            <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-red-800 via-pink-600 to-red-800 bg-clip-text text-transparent mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-red-800 via-pink-600 to-red-800 bg-clip-text text-transparent mb-4"
+            
+            >
               {product.name}
             </h2>
 
@@ -536,7 +533,7 @@ const Modal = ({ product, onClose }) => {
             </div>
 
             <div className="mt-6 flex justify-between items-center">
-            <button
+              <button
                 onClick={handleBuyNowClick}
                 className="w-full sm:w-[535px] bg-gradient-to-r from-red-800 to-pink-600 text-white px-8 py-3 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-pink-600 hover:to-red-800 transition duration-300"
               >
@@ -579,10 +576,15 @@ const AllProducts = () => {
               alt={product.name}
               className="w-full h-80 object-cover rounded-lg"
             />
-            <h3 className="text-lg font-[cursive] sm:text-xl font-bold mt-4 text-red-800">
+            <h3
+              className="text-lg sm:text-xl font-bold mt-4 text-rose-800"
+              style={{ fontFamily: "'Pacifico', cursive" }}
+            >
               {product.name}
             </h3>
-            <p className="text-gray-600 mt-2 font-[cursive] text-lg font-bold sm:text-base">
+            <p className="text-gray-700 mt-2 font-[cursive] text-lg font-medium sm:text-base"
+            style={{ fontFamily: "'Pacifico', cursive" }}
+            >
               {product.description
                 .split(" ")
                 .slice(0, 15)

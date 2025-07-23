@@ -3,49 +3,47 @@ import { useState } from "react";
 
 const products = [
   {
-  id: 1,
-  name: "Blossom Ribbon Flower Bouquet",
-  category: "Ribbon Flower Bouquet",
-  images: [
-    "/images/ribbon1.jpeg",
-    "/images/ribbon2.jpeg",
-    "/images/ribbon3.jpeg",
-    "/images/ribbon4.jpeg",
-
-  ],
-  description:
-    "Celebrate special moments with our Blossom Ribbon Flower Bouquet — a handcrafted arrangement made with delicate ribbon flowers that never wilt. A perfect token of love, elegance, and creativity, ideal for birthdays, anniversaries, or as a lasting decorative gift.",
-  price: "PKR 2550",
-  location: "Karachi, Pakistan",
-  delivery: "Based on location",
-  daysToDeliver: "5-7 Days",
-  reviews: {
-    rating: 5,
-    totalReviews: 4,
+    id: 1,
+    name: "Blossom Ribbon Flower Bouquet",
+    category: "Ribbon Flower Bouquet",
+    images: [
+      "/images/ribbon1.jpeg",
+      "/images/ribbon2.jpeg",
+      "/images/ribbon3.jpeg",
+      "/images/ribbon4.jpeg",
+    ],
+    description:
+      "Celebrate special moments with our Blossom Ribbon Flower Bouquet — a handcrafted arrangement made with delicate ribbon flowers that never wilt. A perfect token of love, elegance, and creativity, ideal for birthdays, anniversaries, or as a lasting decorative gift.",
+    price: "PKR 2550",
+    location: "Karachi, Pakistan",
+    delivery: "Based on location",
+    daysToDeliver: "5-7 Days",
+    reviews: {
+      rating: 5,
+      totalReviews: 4,
+    },
   },
-},
   {
-  id: 2,
-  name: "Elegant Cash Surprise Bouquet",
-  category: "Cash Bouquet",
-  images: [
-    "/images/cash (4).jpg",
-    "/images/cash (2).jpg",
-    "/images/cash (3).jpg",
-    "/images/cash (1).jpg",
-
-  ],
-  description:
-    "Surprise your loved ones with the Elegant Cash Surprise Bouquet — a graceful fusion of floral charm and PKR 5000 in beautifully folded notes. Perfect for birthdays, weddings, or any special celebration where elegance meets generosity.",
-  price: "PKR 6800",
-  location: "Karachi, Pakistan",
-  delivery: "Based on location",
-  daysToDeliver: "5-7 Days",
-  reviews: {
-    rating: 5,
-    totalReviews: 6,
+    id: 2,
+    name: "Elegant Cash Surprise Bouquet",
+    category: "Cash Bouquet",
+    images: [
+      "/images/cash (4).jpg",
+      "/images/cash (2).jpg",
+      "/images/cash (3).jpg",
+      "/images/cash (1).jpg",
+    ],
+    description:
+      "Surprise your loved ones with the Elegant Cash Surprise Bouquet — a graceful fusion of floral charm and PKR 5000 in beautifully folded notes. Perfect for birthdays, weddings, or any special celebration where elegance meets generosity.",
+    price: "PKR 6800",
+    location: "Karachi, Pakistan",
+    delivery: "Based on location",
+    daysToDeliver: "5-7 Days",
+    reviews: {
+      rating: 5,
+      totalReviews: 6,
+    },
   },
-},
 
   {
     id: 3,
@@ -356,7 +354,7 @@ const Products = () => {
       <div className="text-center about mb-12">
         <h1 className="text-4xl name sm:text-5xl font-semibold tracking-wide group hover:text-pink-600 transition-colors duration-300 font-serif">
           <span className="text-red-800 group-hover:text-pink-600 transition-colors duration-300">
-             Trending
+            Trending
           </span>
           <span className="text-pink-600 group-hover:text-red-800 transition-colors duration-300">
             {" "}
@@ -378,10 +376,16 @@ const Products = () => {
               className="w-full h-80 object-cover rounded-lg"
             />
 
-            <h3 className="text-lg font-[cursive] sm:text-xl font-bold mt-4 text-red-800">
+            <h3
+              className="text-lg sm:text-xl font-bold mt-4 text-rose-800"
+              style={{ fontFamily: "'Pacifico', cursive" }}
+            >
               {product.name}
             </h3>
-            <p className="text-gray-600 mt-2 font-[cursive] text-lg font-bold sm:text-base">
+
+          <p className="text-gray-700 mt-2 font-[cursive] text-lg font-medium sm:text-base"
+            style={{ fontFamily: "'Pacifico', cursive" }}
+            >
               {product.description
                 .split(" ")
                 .slice(0, 15)
@@ -395,21 +399,21 @@ const Products = () => {
         ))}
       </div>
       <div className="flex justify-end">
-      <Link
-  href="/allproducts"
-  className="relative cursor-pointer mt-6 z-30 font-barlow inline-flex justify-center text-lg uppercase text-[#4b1248] rounded-lg border-solid transition-transform duration-300 ease-in-out group outline-offset-4 focus:outline focus:outline-2 focus:outline-pink-400 focus:outline-offset-4 overflow-hidden bg-gradient-to-r from-[#fcd3e1] to-[#f7a5c4] px-6 py-3"
->
-  <span className="relative z-20 font-semibold tracking-wide">View More...</span>
+        <Link
+          href="/allproducts"
+          className="relative cursor-pointer mt-6 z-30 font-barlow inline-flex justify-center text-lg uppercase text-[#4b1248] rounded-lg border-solid transition-transform duration-300 ease-in-out group outline-offset-4 focus:outline focus:outline-2 focus:outline-pink-400 focus:outline-offset-4 overflow-hidden bg-gradient-to-r from-[#fcd3e1] to-[#f7a5c4] px-6 py-3"
+        >
+          <span className="relative z-20 font-semibold tracking-wide">
+            View More...
+          </span>
 
-  <span className="absolute left-[-75%] top-0 h-full w-[50%] bg-white/40 rotate-12 z-10 blur-lg group-hover:left-[125%] transition-all duration-1000 ease-in-out"></span>
+          <span className="absolute left-[-75%] top-0 h-full w-[50%] bg-white/40 rotate-12 z-10 blur-lg group-hover:left-[125%] transition-all duration-1000 ease-in-out"></span>
 
-  <span className="w-1/2 drop-shadow-xl transition-all duration-300 block border-[#f7a5c4] absolute h-[20%] rounded-tl-lg border-l-4 border-t-4 top-0 left-0"></span>
-  <span className="w-1/2 drop-shadow-xl transition-all duration-300 block border-[#f7a5c4] absolute group-hover:h-[90%] h-[60%] rounded-tr-lg border-r-4 border-t-4 top-0 right-0"></span>
-  <span className="w-1/2 drop-shadow-xl transition-all duration-300 block border-[#f7a5c4] absolute h-[60%] group-hover:h-[90%] rounded-bl-lg border-l-4 border-b-4 left-0 bottom-0"></span>
-  <span className="w-1/2 drop-shadow-xl transition-all duration-300 block border-[#f7a5c4] absolute h-[20%] rounded-br-lg border-r-4 border-b-4 right-0 bottom-0"></span>
-</Link>
-
-
+          <span className="w-1/2 drop-shadow-xl transition-all duration-300 block border-[#f7a5c4] absolute h-[20%] rounded-tl-lg border-l-4 border-t-4 top-0 left-0"></span>
+          <span className="w-1/2 drop-shadow-xl transition-all duration-300 block border-[#f7a5c4] absolute group-hover:h-[90%] h-[60%] rounded-tr-lg border-r-4 border-t-4 top-0 right-0"></span>
+          <span className="w-1/2 drop-shadow-xl transition-all duration-300 block border-[#f7a5c4] absolute h-[60%] group-hover:h-[90%] rounded-bl-lg border-l-4 border-b-4 left-0 bottom-0"></span>
+          <span className="w-1/2 drop-shadow-xl transition-all duration-300 block border-[#f7a5c4] absolute h-[20%] rounded-br-lg border-r-4 border-b-4 right-0 bottom-0"></span>
+        </Link>
       </div>
 
       {selectedProduct && (

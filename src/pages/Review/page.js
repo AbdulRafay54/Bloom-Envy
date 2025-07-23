@@ -36,10 +36,14 @@ const Page = () => {
   return (
     <section className="bg-gradient-to-b from-pink-50 to-purple-50 py-20 px-6">
       <h2
-        className="text-4xl md:text-5xl text-center text-transparent bg-gradient-to-r from-pink-700 via-pink-600 to-[#4b1248] bg-clip-text mb-6 tracking-wide relative inline-block 
+        className="text-4xl md:text-5xl text-center 
+    text-purple-700 md:text-transparent 
+    md:bg-gradient-to-r md:from-pink-700 md:via-pink-600 md:to-[#4b1248] 
+    md:bg-clip-text 
+    mb-6 tracking-wide relative inline-block 
     after:content-[''] after:absolute after:w-28 after:h-[3px] after:bg-pink-700 after:left-1/2 after:-translate-x-1/2 after:-bottom-3 after:rounded-full 
     before:content-[''] before:absolute before:w-28 before:h-[3px] before:bg-pink-300 before:left-1/2 before:-translate-x-1/2 before:-bottom-6 before:rounded-full"
-        style={{ fontFamily: "'Lobster', cursive" }}
+        style={{ fontFamily: "'Pacifico', cursive" }}
       >
         Customer Love 💕
       </h2>
