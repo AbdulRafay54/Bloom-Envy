@@ -369,6 +369,7 @@ const allProducts = [
 const Modal = ({ product, onClose }) => {
   const [activeImage, setActiveImage] = useState(product?.images[0]);
   const [isClicked, setIsClicked] = useState(false);
+  const [fullImage, setFullImage] = useState(null); // 👈 isse full screen image handle hogi
 
   if (!product) return null;
 
@@ -396,7 +397,6 @@ const Modal = ({ product, onClose }) => {
         >
           &times;
         </button>
-
         <div className="flex flex-col lg:flex-row gap-8 mt-12 lg:mt-24">
           {/* Left Section (Image Gallery) */}
           <div className="flex-1">
@@ -416,7 +416,7 @@ const Modal = ({ product, onClose }) => {
                       ? "border-red-500"
                       : "border-transparent"
                   }`}
-                  onClick={() => setActiveImage(img)}
+                  onClick={() => setFullImage(img)} // ✅ Full screen image set karega
                 />
               ))}
             </div>
@@ -440,9 +440,7 @@ const Modal = ({ product, onClose }) => {
           </div>
           {/* Right Section (Product Details) */}
           <div className="flex-1">
-            <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-red-800 via-pink-600 to-red-800 bg-clip-text text-transparent mb-4"
-            
-            >
+            <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-red-800 via-pink-600 to-red-800 bg-clip-text text-transparent mb-4">
               {product.name}
             </h2>
 
@@ -540,9 +538,24 @@ const Modal = ({ product, onClose }) => {
                 Buy Now ➤
               </button>
             </div>
-          </div>
+          </div>{" "}
+          
+        </div>{" "}
+        
+      </div>{" "}
+     
+      {fullImage && (
+        <div
+          className="fixed inset-0 z-[999] bg-black bg-opacity-80 flex items-center justify-center"
+          onClick={() => setFullImage(null)}
+        >
+          <img
+            src={fullImage}
+            alt="Full View"
+            className="max-w-full max-h-full object-contain rounded-lg shadow-lg cursor-zoom-out"
+          />
         </div>
-      </div>
+      )}
     </div>
   );
 };
@@ -582,8 +595,9 @@ const AllProducts = () => {
             >
               {product.name}
             </h3>
-            <p className="text-gray-700 mt-2 font-[cursive] text-lg font-medium sm:text-base"
-            style={{ fontFamily: "'Pacifico', cursive" }}
+            <p
+              className="text-gray-700 mt-2 font-[cursive] text-lg font-medium sm:text-base"
+              style={{ fontFamily: "'Pacifico', cursive" }}
             >
               {product.description
                 .split(" ")

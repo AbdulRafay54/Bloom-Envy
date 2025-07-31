@@ -25,9 +25,9 @@ const Page = () => {
             rating: parseInt(values[4]) || 5,
           };
         })
-        .filter((review) => review.message.trim() !== ""); // ⬅️ only non-empty reviews
+        .filter((review) => review.message.trim() !== "");
 
-      setReviews(data.reverse()); // latest first
+      setReviews(data.reverse());
     };
 
     fetchCSV();
@@ -75,7 +75,6 @@ const Page = () => {
             "bg-violet-300",
             "bg-emerald-300",
             "bg-teal-300",
-
             "bg-lime-300",
           ];
           const bgColor = colors[index % colors.length];

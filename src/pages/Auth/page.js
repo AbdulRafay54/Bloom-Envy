@@ -76,7 +76,7 @@ const Auth = ({ onLogin }) => {
 
   return (
     <div className="min-h-screen relative flex items-center justify-center p-4">
-      {/* Background Image Layer */}
+
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -87,10 +87,9 @@ const Auth = ({ onLogin }) => {
         }}
       ></div>
 
-      {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-pink-200 via-red-200 to-pink-300 opacity-60 z-0"></div>
 
-      {/* Content */}
+  
       <div className="relative z-10 w-full max-w-sm bg-white rounded-3xl shadow-lg p-8">
         <h2 className="text-3xl text-center font-bold italic text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-red-600">
           {isLogin ? "Welcome Back!" : "Create an Account"}
@@ -123,7 +122,6 @@ const Auth = ({ onLogin }) => {
             />
           </div>
 
-          {/* Confirm Password Field - Only for Signup */}
           {!isLogin && (
             <div>
               <label className="block text-sm font-medium text-gray-600">
@@ -139,7 +137,7 @@ const Auth = ({ onLogin }) => {
             </div>
           )}
 
-          {/* Password Mismatch Message */}
+         
           {!isLogin &&
             password !== confirmPassword &&
             confirmPassword !== "" && (
